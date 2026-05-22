@@ -1,0 +1,40 @@
+/* 404 page (WP Page slug: 404 - UX Builder) custom styles */
+
+.btn-backhome.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 8px 16px;
+
+    background-color: #eef2ff !important;
+    border-color: transparent !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+
+    color: #312e81 !important;
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.07px;
+    text-decoration: none;
+    text-transform: none;
+    white-space: nowrap;
+
+    transition: background-color 0.2s ease;
+
+    > span {
+        color: inherit !important;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: #e0e7ff !important;
+        color: #312e81 !important;
+
+        > span {
+            color: inherit !important;
+        }
+    }
+}

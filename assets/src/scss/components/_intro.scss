@@ -1,0 +1,105 @@
+/* Component: Intro (eyebrow + title + desc + button) */
+.c-intro {
+  /* Eyebrow */
+  &__eyebrow {
+    color: var(--indigo-500, rgba(99, 102, 241, 1));
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: var(--paragraph-small-line-height, 22px);
+    letter-spacing: 0.005em;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    p {
+      margin: 0 0 8px 0;
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+      text-transform: uppercase;
+      color: inherit;
+    }
+  }
+
+  /* Body wrapper (title + desc) */
+  &__body {
+    h2,
+    .c-intro__title {
+      margin: 0;
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 1.15;
+      color: #0f172a;
+      padding-bottom: 24px;
+    }
+
+    p,
+    .c-intro__desc {
+      margin: 12px 0 0 0;
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba(15, 23, 42, 0.7);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.15;
+    color: #0f172a;
+  }
+
+  &__desc {
+    margin: 12px 0 24px 0;
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(15, 23, 42, 0.7);
+  }
+
+  /* Button */
+  &__btn {
+    margin-top: 14px;
+    border-radius: 10px; /* để bỏ inline style */
+    padding: 0.6rem 0.95rem;
+    font-size: 13px;
+    line-height: 1;
+    height: auto;
+
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    margin: 0;
+
+    &:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+  }
+
+  @media (max-width: 849px) {
+    &__body {
+      h2,
+      .c-intro__title {
+        font-size: 22px;
+      }
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 549px) {
+    &__body {
+      h2,
+      .c-intro__title {
+        font-size: 20px;
+        padding: 4px 0 24px 0;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}

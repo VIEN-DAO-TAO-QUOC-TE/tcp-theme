@@ -1,0 +1,105 @@
+/* =========================================
+   Component: Pagination
+   Block: .c-pagination
+   Markup (from WP paginate_links type=list):
+     <nav class="c-pagination">
+       <ul class="page-numbers">
+         <li><a class="prev page-numbers"><i class="icon-chevron-left"></i><span>Trước</span></a></li>
+         <li><span class="page-numbers current">1</span></li>
+         <li><a class="page-numbers">2</a></li>
+         <li><span class="page-numbers dots">…</span></li>
+         <li><a class="next page-numbers"><span>Sau</span><i class="icon-chevron-right"></i></a></li>
+       </ul>
+     </nav>
+   ========================================= */
+
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--semantic-2xl, 40px);
+
+  > ul.page-numbers {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    > li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 0;
+    }
+  }
+
+  .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 34px;
+    min-height: 36px;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--general-muted-foreground, #6B7280);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-weight: 500;
+    line-height: var(--paragraph-small-line-height, 22px);
+    letter-spacing: 0.07px;
+    text-decoration: none;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+  }
+
+  a.page-numbers:hover,
+  a.page-numbers:focus-visible {
+    color: var(--general-foreground, #1F2937);
+    background-color: rgba(17, 24, 39, 0.04);
+    outline: none;
+  }
+
+  .page-numbers.current {
+    border-color: #D1D5DB;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--general-foreground, #1F2937);
+  }
+
+  .page-numbers.prev,
+  .page-numbers.next {
+    color: var(--general-secondary-foreground, #312E81);
+
+    i {
+      font-size: 16px;
+      line-height: 1;
+    }
+  }
+
+  .page-numbers.dots {
+    border: 0;
+    background: transparent;
+    color: var(--general-muted-foreground, #6B7280);
+    cursor: default;
+  }
+
+  @media (max-width: 549px) {
+    > ul.page-numbers {
+      gap: 4px;
+    }
+
+    .page-numbers {
+      padding: 8px 12px;
+    }
+
+    .page-numbers.prev span,
+    .page-numbers.next span {
+      display: none;
+    }
+  }
+}

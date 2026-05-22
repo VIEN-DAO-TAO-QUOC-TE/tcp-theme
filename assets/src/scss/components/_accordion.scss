@@ -1,0 +1,67 @@
+.accordion {
+    .accordion-item {}
+
+    .toggle {
+        left: unset;
+        right: 0;
+        margin-right: 0;
+        top: 0.6em;
+    }
+}
+
+.accordion-item {
+    &:first-of-type {
+        .accordion-title {
+            border-top: none;
+        }
+    }
+
+    .accordion-title {
+        color: var(--general-foreground, #1F2937);
+
+        /* paragraph small/bold */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: var(--paragraph-small-line-height, 22px);
+        /* 157.143% */
+        letter-spacing: 0.07px;
+    }
+
+    .accordion-inner {}
+}
+
+.accordion-title {
+    padding: 16px 40px 16px 0;
+    border-top: var(--general-foreground, #1F2937);
+
+    &.active {
+        border-top: var(--general-foreground, #1F2937);
+        background-color: transparent;
+    }
+
+    .toggle {
+        .icon-angle-down {
+            &::before {
+                content: "\e06d";
+            }
+        }
+    }
+}
+
+.accordion-inner {
+    padding: 0;
+
+    p, b, span{
+        color: var(--general-foreground, #1F2937);
+
+        /* paragraph small/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-small-line-height, 157.143%);
+        letter-spacing: 0.07px;
+    }
+}

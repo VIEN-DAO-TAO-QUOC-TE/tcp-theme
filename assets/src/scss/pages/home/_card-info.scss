@@ -1,0 +1,70 @@
+/* Home > Section: Card Info (intro left + media cards right) */
+.home-card-info {
+  &__layout {
+
+    &.row-collapse {
+      &>.col {
+        @include breakpoints-down(medium) {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      }
+    }
+  }
+
+  &__layout>.col>.col-inner {
+    border-radius: 40px;
+    background: #EEF2FF;
+    padding: 80px 80px;
+
+    @include breakpoints-down(medium) {
+      padding: 24px;
+    }
+  }
+
+  &__inner {
+    align-items: center;
+  }
+
+  &__col {
+    .c-intro__btn {
+      margin-top: 24px;
+    }
+
+    &--intro {}
+
+    &--cards {
+      padding-bottom: 0;
+    }
+  }
+
+  &__grid {
+    margin-left: -12px;
+    margin-right: -12px;
+
+    >.col {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
+  &__card-col {}
+
+  @include breakpoints-down(medium) {
+    &__grid {
+      margin-left: -10px;
+      margin-right: -10px;
+
+      >.col {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &__col--intro {}
+  }
+
+  @include breakpoints-down(small) {
+    &__col--intro {}
+  }
+}

@@ -1,0 +1,130 @@
+// /* ==========================================================================
+//    Fancybox (TCP) - Customize UI for YouTube popup
+//    Target Fancybox v6 markup: .fancybox__dialog/.fancybox__container/...
+//    ========================================================================== */
+
+// /* 1) Dialog base */
+// .fancybox__dialog {
+//   border: 0;
+//   padding: 0;
+//   background: transparent;
+// }
+
+// /* 2) Container / overlay */
+// .fancybox__container {
+//   color: #fff;
+// }
+
+// /* backdrop overlay */
+// .fancybox__backdrop {
+//   background: rgba(15, 23, 42, 0.72) !important; // slate overlay
+//   backdrop-filter: blur(2px);
+// }
+
+// /* 3) Slide/video wrapper (bo góc + shadow) */
+// .fancybox__slide {
+//   padding: 24px; /* tạo khoảng hở để close/arrow không chạm video */
+// }
+
+// /* Fancybox thường bọc iframe trong .f-html */
+// .fancybox__slide .f-html {
+//   /* Khung video */
+//   border-radius: 16px;
+//   overflow: hidden;
+
+//   /* shadow giống dialog */
+//   box-shadow:
+//     0 20px 60px rgba(0, 0, 0, 0.35);
+//   background: #000;
+
+//   /* giới hạn chiều rộng popup */
+//   width: min(980px, calc(100vw - 48px));
+// }
+
+// /* iframe full width */
+// .fancybox__slide .f-iframe {
+//   display: block;
+//   width: 100%;
+//   aspect-ratio: 16 / 9;
+//   height: auto;
+//   border: 0;
+// }
+
+// /* 4) Close button */
+// .fancybox__slide .is-close-button {
+//   position: absolute;
+//   top: 14px;
+//   right: 14px;
+
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 999px;
+
+//   background: rgba(255, 255, 255, 0.14);
+//   border: 1px solid rgba(255, 255, 255, 0.18);
+//   backdrop-filter: blur(8px);
+
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   transition: background 160ms ease, transform 160ms ease;
+// }
+
+// .fancybox__slide .is-close-button:hover {
+//   background: rgba(255, 255, 255, 0.22);
+//   transform: translateY(-1px);
+// }
+
+// .fancybox__slide .is-close-button svg {
+//   opacity: 0.92;
+// }
+
+// /* 5) Prev/Next arrows */
+// .fancybox__carousel.has-arrows .f-button.is-arrow {
+//   width: 44px;
+//   height: 44px;
+//   border-radius: 999px;
+
+//   background: rgba(255, 255, 255, 0.14);
+//   border: 1px solid rgba(255, 255, 255, 0.18);
+//   backdrop-filter: blur(8px);
+
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   transition: background 160ms ease, transform 160ms ease;
+// }
+
+// .fancybox__carousel.has-arrows .f-button.is-arrow:hover {
+//   background: rgba(255, 255, 255, 0.22);
+//   transform: translateY(-1px);
+// }
+
+// /* đặt arrows cách video một chút */
+// .fancybox__carousel.has-arrows .f-button.is-prev {
+//   left: 16px;
+// }
+// .fancybox__carousel.has-arrows .f-button.is-next {
+//   right: 16px;
+// }
+
+// /* 6) Mobile tweak: giảm padding */
+// @media (max-width: 640px) {
+//   .fancybox__slide {
+//     padding: 14px;
+//   }
+
+//   .fancybox__slide .f-html {
+//     width: min(100%, calc(100vw - 28px));
+//     border-radius: 14px;
+//   }
+
+//   .fancybox__slide .is-close-button {
+//     top: 10px;
+//     right: 10px;
+//     width: 36px;
+//     height: 36px;
+//   }
+// }

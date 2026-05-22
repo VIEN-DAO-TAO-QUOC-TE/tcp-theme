@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Course FAQ (BEM)
+   ========================================================================== */
+
+.c-course-faq {
+}
+
+.c-course-faq__inner {
+}
+
+.c-course-faq__header {
+}
+
+.c-course-faq__eyebrow {
+}
+
+.c-course-faq__title {
+}
+
+.c-course-faq__accordion {
+  // wrapper around flatsome accordion output
+}
+
+/* Optional: target Flatsome accordion classes inside (để customize UI)
+*/
+.c-course-faq__accordion {
+  .accordion {
+  }
+
+  .accordion-item {
+  }
+
+  .accordion-title {
+  }
+
+  .accordion-inner {
+  }
+}

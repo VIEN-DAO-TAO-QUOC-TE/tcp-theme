@@ -1,0 +1,231 @@
+{
+    "key": "group_registration_confirmation_page_dynamic",
+    "title": "Registration Confirmation Page Dynamic",
+    "fields": [
+        {
+            "key": "tab_tcp_confirm_content",
+            "label": "1. Content",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 1
+        },
+        {
+            "key": "field_tcp_confirm_eyebrow",
+            "label": "Eyebrow",
+            "name": "tcp_confirm_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Small label above heading.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "DANG KY THANH CONG",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tcp_confirm_title",
+            "label": "Title",
+            "name": "tcp_confirm_title",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Main heading. Use line breaks for multiple lines.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Talent Connect Plus\nda nhan thong tin cua ban",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_tcp_confirm_description",
+            "label": "Description",
+            "name": "tcp_confirm_description",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Description text under heading.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Chung toi se lien he voi ban trong thoi gian som nhat.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tcp_confirm_button_text",
+            "label": "Button text",
+            "name": "tcp_confirm_button_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Tro ve trang chu",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tcp_confirm_button_link",
+            "label": "Button link",
+            "name": "tcp_confirm_button_link",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "URL for button.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "\/",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "tab_tcp_confirm_visual",
+            "label": "2. Visual",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_tcp_confirm_visual_image",
+            "label": "Visual image",
+            "name": "tcp_confirm_visual_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload envelope illustration from design.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "png,svg,webp,jpg,jpeg"
+        },
+        {
+            "key": "field_tcp_confirm_visual_alt",
+            "label": "Visual image alt",
+            "name": "tcp_confirm_visual_alt",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Alternative text for image.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Thong bao dang ky thanh cong",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tcp_confirm_visual_bg",
+            "label": "Visual card background",
+            "name": "tcp_confirm_visual_bg",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Background color of visual card.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#E5E7EB",
+            "enable_opacity": 0,
+            "return_format": "string",
+            "custom_palette_source": "",
+            "palette_colors": "",
+            "show_color_wheel": true
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-xac-nhan-dang-ky.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "pll_display_field_instructions": 1,
+    "modified": 1776190281
+}

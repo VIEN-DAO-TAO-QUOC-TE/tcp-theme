@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Course Hero Cover (BEM)
+   ========================================================================== */
+
+.c-course-hero-cover {
+  // block wrapper (section)
+}
+
+.c-course-hero-cover__inner {
+  // container (optional: max-width / padding theo layout)
+}
+
+.c-course-hero-cover__media {
+  // media wrapper: border-radius, overflow, ratio, background...
+  border-radius: var(--semantic-rounded-md, 6px);
+  background: linear-gradient(0deg, var(--indigo-400, #818CF8) 0%, var(--indigo-400, #818CF8) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat, #D9D9D9;
+  background-blend-mode: color, normal, normal;
+
+  img {
+    width: 100%;
+  }
+
+  ;
+}
+
+.c-course-hero-cover__img {
+  // img: width/height, object-fit...
+}
+
+/* Modifiers (tuỳ dùng sau này) */
+.c-course-hero-cover--rounded {
+  // variant: cover bo góc mạnh hơn
+}
+
+.c-course-hero-cover--ratio-16x9 {
+  // variant: fixed ratio 16:9
+}
+
+.c-course-hero-cover--ratio-21x9 {
+  // variant: fixed ratio 21:9
+}
+
+.c-course-hero-cover__img--contain {
+  // variant: object-fit contain
+}
+
+.c-course-hero-cover__img--cover {
+  // variant: object-fit cover
+}

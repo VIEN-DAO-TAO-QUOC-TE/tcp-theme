@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Course Testimonials (BEM)
+   ========================================================================== */
+
+.c-course-testimonials {}
+
+.c-course-testimonials__inner {}
+
+.c-course-testimonials__header {}
+
+.c-course-testimonials__eyebrow {}
+
+.c-course-testimonials__title {}
+
+.c-course-testimonials__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    .c-testimonial-card {
+        border-radius: 16px;
+        border: 1px solid var(--general-border, #E5E7EB);
+        background: var(--general-background, #FFF);
+        margin-bottom: 0;
+    }
+}
+
+.c-course-testimonials__card {
+    display: flex;
+    min-width: 289px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--semantic-md, 16px);
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid var(--general-border, #E5E7EB);
+    background: var(--general-background, #FFF);
+}
+
+.c-course-testimonials__quoteWrap {}
+
+.c-course-testimonials__quoteIcon {
+    // icon quote
+}
+
+.c-course-testimonials__quote {}
+
+.c-course-testimonials__footer {}
+
+.c-course-testimonials__person {}
+
+.c-course-testimonials__avatar {}
+
+.c-course-testimonials__avatar--placeholder {}
+
+.c-course-testimonials__meta {}
+
+.c-course-testimonials__role {}
+
+.c-course-testimonials__name {}
+
+/* Modifiers */
+.c-course-testimonials--compact {}
+
+.c-course-testimonials__card--featured {}

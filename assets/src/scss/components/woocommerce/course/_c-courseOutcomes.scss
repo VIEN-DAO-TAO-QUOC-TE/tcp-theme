@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Course Outcomes (BEM)
+   ========================================================================== */
+
+.c-course-outcomes {}
+
+.c-course-outcomes__inner {
+    padding: 32px;
+    border-radius: 16px;
+    background: var(--general-background, #FFF);
+    box-shadow: 0 0 24px 0 var(--indigo-200, #C7D2FE) inset;
+}
+
+.c-course-outcomes__header {}
+
+.c-course-outcomes__eyebrow {}
+
+.c-course-outcomes__title {}
+
+.c-course-outcomes__desc {}
+
+.c-course-outcomes__list {
+    list-style: none;
+
+    .c-course-outcomes__item {
+        margin-left: 0;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.c-course-outcomes__item {
+    display: flex;
+    align-items: center;
+    .c-course-outcomes__icon{
+        margin-right: 20px;
+    }
+}
+
+.c-course-outcomes__icon {
+   color: #6366F1;
+}
+
+.c-course-outcomes__text {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph small/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    letter-spacing: 0.07px;
+}
+
+/* Modifiers */
+.c-course-outcomes--boxed {}
+
+.c-course-outcomes__item--emphasis {}

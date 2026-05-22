@@ -1,0 +1,89 @@
+/* Home > Section: Courses (Woo product grid) */
+.home-courses {
+
+    /* Header */
+    &__col--header {
+        padding-bottom: 0;
+
+        h2 span {
+            color: #EA580C;
+        }
+    }
+
+    &__grid {
+        .flickity-slider {
+            @include breakpoints-down(small) {
+                &>* {
+                    display: flex;
+                    align-items: stretch;
+                    // min-height: 100%;
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    &__grid {
+        .product-small.col {
+            width: 280px !important;
+        }
+
+        .product-small.box {
+            /* card wrapper */
+        }
+
+        .box-image {
+
+            img {
+                /* image */
+            }
+        }
+
+        .badge-container {
+            /* badge positioning */
+        }
+
+        .onsale {
+            /* on sale label */
+        }
+
+        .box-text-products {
+            /* body */
+        }
+
+        .product-cat {
+            /* category */
+        }
+
+        .product-title {
+
+            /* title */
+            a {
+                /* link */
+            }
+        }
+
+        .price-wrapper,
+        .price {
+            /* price */
+        }
+
+        .quick-view {
+            /* quick view */
+        }
+    }
+
+    &__cta {
+        &>.col {
+            padding-bottom: 0;
+        }
+
+        .button {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #312E81 !important;
+        }
+    }
+}

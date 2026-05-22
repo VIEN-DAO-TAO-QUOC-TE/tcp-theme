@@ -1,0 +1,338 @@
+/* ---------------------------------------------------
+   FLEXBOX HELPERS
+--------------------------------------------------- */
+@use "sass:map";
+
+@mixin equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+@mixin row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-middle {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ---------------------------------------------------
+   SIZE HELPERS
+--------------------------------------------------- */
+
+@mixin size($w, $h: $w) {
+    width: $w;
+    height: $h;
+}
+
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
+
+
+/* ---------------------------------------------------
+   POSITION HELPERS
+--------------------------------------------------- */
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absolute-fill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* ---------------------------------------------------
+   TRANSITIONS & ANIMATIONS
+--------------------------------------------------- */
+
+@mixin transition($props: all, $time: 0.25s, $easing: ease) {
+    transition: $props $time $easing;
+}
+
+@mixin transition-fast($props: all) {
+    transition: $props 0.15s ease;
+}
+
+
+/* ---------------------------------------------------
+   SPACING HELPERS
+--------------------------------------------------- */
+/* Usage:
+ * @include p(20px);
+ * @include px(20px);
+ * @include pt(10px);
+ */
+
+@mixin p($v) {
+    padding: $v;
+}
+
+@mixin px($v) {
+    padding-left: $v;
+    padding-right: $v;
+}
+
+@mixin py($v) {
+    padding-top: $v;
+    padding-bottom: $v;
+}
+
+@mixin pt($v) {
+    padding-top: $v;
+}
+
+@mixin pr($v) {
+    padding-right: $v;
+}
+
+@mixin pb($v) {
+    padding-bottom: $v;
+}
+
+@mixin pl($v) {
+    padding-left: $v;
+}
+
+@mixin m($v) {
+    margin: $v;
+}
+
+@mixin mx($v) {
+    margin-left: $v;
+    margin-right: $v;
+}
+
+@mixin my($v) {
+    margin-top: $v;
+    margin-bottom: $v;
+}
+
+@mixin mt($v) {
+    margin-top: $v;
+}
+
+@mixin mr($v) {
+    margin-right: $v;
+}
+
+@mixin mb($v) {
+    margin-bottom: $v;
+}
+
+@mixin ml($v) {
+    margin-left: $v;
+}
+
+
+/* ---------------------------------------------------
+   TYPOGRAPHY HELPERS
+--------------------------------------------------- */
+
+@mixin heading($size, $weight: 700, $lh: 1.2, $spacing: 0) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lh;
+    letter-spacing: $spacing;
+}
+
+@mixin text-style($size, $lh: 1.5, $weight: 400) {
+    font-size: $size;
+    line-height: $lh;
+    font-weight: $weight;
+}
+
+/* ---------------------------------------------------
+   RESPONSIVE HELPERS (FLATSOME)
+--------------------------------------------------- */
+/* Flatsome breakpoints:
+ * xs (mobile):   <= 549px
+ * sm (tablet):   550px – 849px
+ * md (desktop):  >= 850px
+ * lg (wide):     >= 1200px (tuỳ chọn, Flatsome không bắt buộc)
+ */
+
+$break-xs: 549px;
+$break-sm: 550px;
+$break-md: 850px;
+$break-lg: 1200px;
+
+/* Simple usage:
+ * @include respond(xs) { ... }
+ */
+
+@mixin respond($break) {
+    @if $break ==xs {
+        @media (max-width: $break-xs) {
+            @content;
+        }
+    }
+
+    @else if $break ==sm {
+        @media (min-width: $break-sm) and (max-width: $break-md - 1) {
+            @content;
+        }
+    }
+
+    @else if $break ==md {
+        @media (min-width: $break-md) and (max-width: $break-lg - 1) {
+            @content;
+        }
+    }
+
+    @else if $break ==lg {
+        @media (min-width: $break-lg) {
+            @content;
+        }
+    }
+}
+
+/* Smart usage: apply to a range
+ * @include respond-max(849px) { ... }
+ */
+
+@mixin respond-max($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin respond-min($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+/* ---------------------------------------------------
+   SHADOW HELPERS
+--------------------------------------------------- */
+
+@mixin shadow($v) {
+    box-shadow: $v;
+}
+
+@mixin shadow-soft {
+    box-shadow: 0 10px 30px rgba(16, 24, 32, 0.12);
+}
+
+@mixin shadow-hover {
+    box-shadow: 0 20px 40px rgba(16, 24, 32, 0.16);
+}
+
+
+/* ---------------------------------------------------
+   GRADIENT HELPERS
+--------------------------------------------------- */
+
+@mixin gradient($from, $to) {
+    background: linear-gradient(180deg, $from 0%, $to 100%);
+}
+
+/* ============================================
+   GRID GUTTER MIXIN — giống Bootstrap
+   ============================================ */
+
+@mixin ux-gutter($gap: $gutter) {
+    .row {
+        margin-left: calc(#{$gap} / -2);
+        margin-right: calc(#{$gap} / -2);
+    }
+
+    .col {
+        padding-left: calc(#{$gap} / 2) !important;
+        padding-right: calc(#{$gap} / 2) !important;
+    }
+
+    .col:first-child {
+        padding-left: 0 !important;
+    }
+
+    .col:last-child {
+        padding-right: 0 !important;
+    }
+}
+
+@mixin section-spacing {
+    padding-top: $section-padding-mobile !important;
+    padding-bottom: $section-padding-mobile !important;
+
+    @media (min-width: $bp-lg) {
+        padding-top: $section-padding-desktop !important;
+        padding-bottom: $section-padding-desktop !important;
+    }
+}
+
+@function ratio($w, $h) {
+    @return calc(#{$w} / #{$h} * 100%);
+}
+
+
+$breakpoints-up: (
+    'medium': 550px,
+    'large': 850px,
+);
+
+$breakpoints-down: (
+    'xsmall': 375px,
+    'small': 549px,
+    'medium': 849px,
+);
+@mixin breakpoints-up($size) {
+    @media (min-width: map.get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoints-down($size) {
+    @media (max-width: map.get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoints-only-medium() {
+    @media screen and (max-width: 849px) and (min-width: 550px) {
+        @content;
+    }
+}

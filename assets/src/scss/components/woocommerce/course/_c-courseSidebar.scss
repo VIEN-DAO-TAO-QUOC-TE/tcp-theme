@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Course Sidebar — Figma node 6341:39399
+   White card with eyebrow / title / tagline / desc / wrap meta items.
+   ========================================================================== */
+
+.c-course-sidebar {
+    width: 100%;
+}
+
+/* Mobile: add gap above sidebar column when stacked below main content */
+@media (max-width: 849px) {
+    .c-course__sidebar {
+        margin-top: 24px;
+    }
+}
+
+.c-course-sidebar__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    padding: 24px;
+    background: var(--general-background, #fff);
+    border-radius: 12px;
+}
+
+.c-course-sidebar__eyebrow {
+    display: inline-block;
+    color: var(--orange-500, #F97316);
+    text-decoration: none;
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-mini-font-size, 12px);
+    font-weight: 700;
+    line-height: var(--paragraph-mini-line-height, 16px);
+    letter-spacing: 0.18px;
+    text-transform: uppercase;
+}
+
+.c-course-sidebar__eyebrow:hover {
+    color: var(--orange-600, #EA580C);
+}
+
+.c-course-sidebar__title {
+    margin: 0;
+    color: var(--general-foreground, #1F2937);
+    font-family: var(--font-definitions-font-family-headings, Inter);
+    font-size: var(--heading-2-font-size, 30px);
+    font-weight: 700;
+    line-height: var(--heading-2-line-height, 36px);
+    letter-spacing: var(--heading-2-letter-spacing, 0);
+}
+
+.c-course-sidebar__tagline {
+    margin: 0;
+    color: var(--orange-600, #EA580C);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-regular-font-size, 16px);
+    font-weight: 700;
+    line-height: var(--paragraph-regular-line-height, 24px);
+    letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+}
+
+.c-course-sidebar__desc {
+    color: var(--general-foreground, #1F2937);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 22px);
+    letter-spacing: 0.07px;
+
+    p {
+        margin: 0;
+    }
+
+    p + p {
+        margin-top: 8px;
+    }
+}
+
+.c-course-sidebar__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 40px;
+    width: 100%;
+}
+
+.c-course-sidebar__metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.c-course-sidebar__metaIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    color: var(--general-foreground, #1F2937);
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.c-course-sidebar__metaValue {
+    color: var(--general-foreground, #1F2937);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 22px);
+    letter-spacing: 0.07px;
+    min-width: 0;
+}
+
+/* Sticky compact variant (used by CourseStickyHeaderUI when scrolled) */
+.c-course-sidebar__taskbar {
+    display: none;
+}
+
+.c-course-sidebar.is-compact {
+    .c-course-sidebar__eyebrow,
+    .c-course-sidebar__title,
+    .c-course-sidebar__tagline,
+    .c-course-sidebar__desc,
+    .c-course-sidebar__meta {
+        display: none;
+    }
+
+    .c-course-sidebar__taskbar {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        background: var(--general-background, #fff);
+        border-bottom: 1px solid var(--general-border, #E5E7EB);
+        padding: 10px 12px;
+    }
+}
+
+.c-course-sidebar__taskbarTitle {
+    font-weight: 700;
+    margin-bottom: 6px;
+}

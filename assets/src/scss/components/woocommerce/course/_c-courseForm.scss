@@ -1,0 +1,153 @@
+/* =========================================
+   Component: Course / Sidebar Form (CF7)
+   Block: .c-course-form
+   ========================================= */
+
+/* Disable Flatsome's whole-column sticky for the course sidebar
+   and stretch wrapper chain so only .c-course-form can stick. */
+.c-course__sidebar > .is-sticky-column {
+  position: static !important;
+  top: auto !important;
+}
+
+.c-course__sidebar > .is-sticky-column,
+.c-course__sidebar > .is-sticky-column > .is-sticky-column__inner,
+.c-course__sidebar > .is-sticky-column > .is-sticky-column__inner > .col-inner {
+  height: 100%;
+}
+
+.c-course-form {
+  position: sticky;
+  top: calc(var(--flatsome-scroll-padding-top, 0px) + 30px);
+  margin-top: var(--semantic-lg, 20px);
+
+  @media (max-width: 849px) {
+    position: static;
+    top: auto;
+  }
+
+  &__card {
+    background: var(--general-card, #fff);
+    border-radius: var(--semantic-rounded-2xl, 16px);
+    padding: var(--semantic-xl, 24px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--semantic-lg, 20px);
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--general-foreground, #1F2937);
+    font-family: var(--font-definitions-font-family-headings, Inter);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__consent {
+    color: var(--general-muted-foreground, #6B7280);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: 12px;
+    line-height: 18px;
+
+    a {
+      color: var(--general-primary, #4F46E5);
+      text-decoration: underline;
+    }
+  }
+
+  /* CF7 overrides — style the default form output to match Figma */
+  .wpcf7,
+  .wpcf7-form {
+    margin: 0;
+    padding: 0;
+  }
+
+  .wpcf7-form > p {
+    margin: 0 0 12px;
+  }
+
+  .wpcf7-form-control-wrap {
+    display: block;
+  }
+
+  .wpcf7-form input[type="text"],
+  .wpcf7-form input[type="email"],
+  .wpcf7-form input[type="tel"],
+  .wpcf7-form input[type="url"],
+  .wpcf7-form input[type="number"],
+  .wpcf7-form select,
+  .wpcf7-form textarea {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 1px solid var(--general-border, #E5E7EB);
+    border-radius: var(--semantic-rounded-lg, 8px);
+    background: var(--general-background, #fff);
+    color: var(--general-foreground, #1F2937);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: 14px;
+    line-height: 22px;
+    transition: border-color .15s ease, box-shadow .15s ease;
+    box-shadow: none;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      border-color: var(--general-primary, #4F46E5);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    }
+  }
+
+  .wpcf7-form textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  /* 2-column grid wrapper. Wrap pairs of fields in <span class="c-course-form__row"> in the CF7 form markup. */
+  .c-course-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--semantic-md, 16px);
+
+    @media (max-width: 549px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wpcf7-submit,
+  .wpcf7-form input[type="submit"] {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: var(--semantic-rounded-lg, 8px);
+    background: var(--general-primary, #4F46E5);
+    color: var(--general-primary-foreground, #fff);
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    cursor: pointer;
+    transition: background-color .15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--indigo-700, #4338CA);
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    color: var(--general-danger, #B91C1C);
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .wpcf7-response-output {
+    margin: 12px 0 0;
+    padding: 8px 12px;
+    border-radius: var(--semantic-rounded-lg, 8px);
+    font-size: 13px;
+    line-height: 20px;
+  }
+}

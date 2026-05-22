@@ -1,0 +1,109 @@
+.product-small>.col-inner.has-course-card-bg {
+  background-image: none;
+  background-color: #f7f1dd;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Keep the product shell transparent so shared background is visible. */
+.product-small .box {
+  background: transparent;
+  box-shadow: none;
+}
+
+.product-small .box-image {
+  position: relative;
+  padding: 0;
+  background-image: var(--tcp-course-card-bg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* Equal-height mode from Flatsome injects ratio padding; disable for custom media card. */
+.c-product-grid.has-equal-box-heights .product-small .box-image {
+  padding-top: 0 !important;
+}
+
+/* Fallback for archive/category layouts that only expose the generic class. */
+.has-equal-box-heights .box-image {
+  padding-top: 0 !important;
+}
+
+.product-small .box-image .box-image-inner,
+.product-small .box-image .box-image-inner>a {
+  display: block;
+  height: auto !important;
+}
+
+/* Reset Flatsome ratio wrappers to avoid double aspect-ratio spacing. */
+.product-small .box-image .box-image-inner {
+  padding-top: 0 !important;
+}
+
+.product-small .box-image .box-image-inner>a {
+  position: static !important;
+}
+
+/* 16:9 thumbnail area that uses the same background source as card shell. */
+.c-courseCardMedia {
+  position: relative;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  background-image: var(--tcp-course-card-bg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.c-courseCardMedia__spacer {
+  display: block;
+  padding-top: 56.25%;
+}
+
+.c-courseCardMedia__trainer {
+  position: absolute;
+  // right: 10px;
+  // bottom: 0;
+  // left: auto !important;
+  // top: auto !important;
+  inset: 0;
+  width: auto !important;
+  height: 100%;
+  // max-width: 66%;
+  object-fit: cover;
+  object-position: right bottom;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 100%);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 849px) {
+  .product-small .box-image {
+    padding: 0;
+  }
+
+  .c-courseCardMedia__trainer {
+    // right: 9px;
+    // left: auto !important;
+    top: auto !important;
+    height: 91%;
+    max-width: 67%;
+  }
+}
+
+@media (max-width: 549px) {
+  .product-small .box-image {
+    padding: 0;
+  }
+
+  .c-courseCardMedia__trainer {
+    // right: 8px;
+    // top: auto !important;
+    inset: 0;
+    height: 100%;
+    // max-width: 68%;
+  }
+}

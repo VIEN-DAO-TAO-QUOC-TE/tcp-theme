@@ -1,0 +1,108 @@
+.tcp-business-page {
+  background: #fff;
+  padding-bottom: 56px;
+}
+
+.tcp-business-page .category-grid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tcp-business-page .tcp-business-page__breadcrumb {
+  margin-bottom: 28px;
+}
+
+.tcp-business-page__header {
+  margin-bottom: 40px;
+}
+
+.tcp-business-page__eyebrow {
+  margin: 0 0 4px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.page-doanh-nghiep .category-grid .c-media-card {
+  box-shadow: unset!important;
+  border:none!important
+}
+
+.page-doanh-nghiep .category-grid .c-media-card .box-text {
+  bottom:90px!important;
+}
+
+.tcp-business-page__title {
+  margin: 0;
+  color: var(--general-foreground, rgba(31, 41, 55, 1));
+  font-family: var(--font-definitions-font-family-headings, Inter);
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--heading-1-font-size, 58px);
+  line-height: var(--heading-1-line-height, 1.08);
+  letter-spacing: var(--heading-2-letter-spacing, -0.03em);
+  vertical-align: middle;
+}
+
+
+.c-media-card__title h4{
+  font-size: 20px!important;
+}
+.tcp-business-page__description {
+  max-width: 860px;
+  margin-top: 14px;
+  color: #6b7280;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.tcp-business-page__section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.tcp-business-page .category-grid__card-col .c-media-card {
+  min-height: 399px;
+}
+
+
+.tcp-business-page .category-grid .c-media-card .box-image img {
+  min-height: 100%;
+  object-fit: cover;
+  min-height: 399px;
+  max-height: 399px;
+}
+.tcp-business-page .category-grid .c-media-card {
+  box-shadow: unset!important;
+  border:none!important;
+}
+
+
+
+@media (max-width: 849px) {
+  .tcp-business-page .category-grid__card-col .c-media-card {
+    min-height: auto;
+  }
+  /* .tcp-business-page .category-grid .c-media-card .box-text {bottom: 100px;} */
+
+  .tcp-business-page .category-grid .c-media-card .box-image img {
+    min-height: auto!important;
+    max-height: auto!important;
+  }
+  .tcp-business-page__title {
+    font-family: var(--font-definitions-font-family-headings, Inter);
+    font-weight: 700;
+    font-style: normal;
+    font-size: var(--heading-2-font-size, 42px);
+    line-height: var(--heading-2-line-height, 1.12);
+    letter-spacing: var(--heading-2-letter-spacing, -0.03em);
+    vertical-align: middle;
+  }
+
+  .tcp-business-page__description {
+    font-size: 16px;
+  }
+}

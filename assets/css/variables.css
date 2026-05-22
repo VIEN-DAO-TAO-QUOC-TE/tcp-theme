@@ -1,0 +1,175 @@
+:root {
+  /*
+   * TCP shared design tokens
+   * Source: variables/TCP.tokens.json
+   * Use this file as the common CSS variable layer across the theme.
+   */
+
+  /* Font families */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-definitions-font-family-sans: var(--font-sans);
+  --font-definitions-font-family-serif: "Inter", serif;
+  --font-definitions-font-family-headings: var(--font-sans);
+  --font-definitions-font-family-body: var(--font-sans);
+  --font-definitions-font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+  /* Raw palette */
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+
+  /* General semantic colors used by the theme */
+  --general-background: var(--white);
+  --general-foreground: var(--gray-800);
+  --general-muted-foreground: var(--gray-500);
+  --general-border: var(--gray-200);
+  --general-input: var(--white);
+  --general-accent: var(--gray-100);
+  --general-secondary: #F9FAFB;
+  --general-secondary-foreground: #312E81;
+  --general-primary: #4F46E5;
+  --general-primary-foreground: #F9FAFB;
+
+  /* Card defaults */
+  --card-card: var(--white);
+  --tcp-card-bg: radial-gradient(122.11% 100% at 20.24% -0.1%, var(--gray-50) 0%, var(--gray-200) 100%);
+
+  /* Shared spacing scale */
+  --absolute-0: 0px;
+  --absolute-0-5: 2px;
+  --absolute-1: 4px;
+  --absolute-1-5: 6px;
+  --absolute-2: 8px;
+  --absolute-2-5: 10px;
+  --absolute-3: 12px;
+  --absolute-3-5: 14px;
+  --absolute-4: 16px;
+  --absolute-5: 20px;
+  --absolute-6: 24px;
+  --absolute-7: 28px;
+  --absolute-8: 32px;
+  --absolute-9: 36px;
+  --absolute-10: 40px;
+  --absolute-11: 44px;
+  --absolute-12: 48px;
+  --absolute-14: 56px;
+  --absolute-16: 64px;
+  --absolute-20: 80px;
+  --absolute-24: 96px;
+  --absolute-28: 112px;
+  --absolute-32: 128px;
+  --absolute-36: 144px;
+  --absolute-40: 160px;
+  --absolute-44: 176px;
+  --absolute-48: 192px;
+  --absolute-52: 208px;
+  --absolute-56: 224px;
+  --absolute-60: 240px;
+  --absolute-64: 256px;
+  --absolute-72: 288px;
+  --absolute-80: 320px;
+  --absolute-96: 384px;
+  --absolute-infinite: 9999px;
+
+  /* Backward-compatible aliases already used in the theme */
+  --absolute-15: var(--absolute-1-5);
+  --absolute-25: var(--absolute-2-5);
+
+  --semantic-3xs: var(--absolute-0-5);
+  --semantic-2xs: var(--absolute-1);
+  --semantic-xs: var(--absolute-2);
+  --semantic-md: var(--absolute-4);
+  --semantic-lg: var(--absolute-5);
+  --semantic-xl: var(--absolute-6);
+  --semantic-2xl: var(--absolute-8);
+  --semantic-3xl: var(--absolute-10);
+  --semantic-4xl: var(--absolute-12);
+  --semantic-5xl: var(--absolute-16);
+
+  /* Padding aliases (semantic) */
+  --padding-semantic-3xs: var(--semantic-3xs);
+  --padding-semantic-2xs: var(--semantic-2xs);
+  --padding-semantic-xs: var(--semantic-xs);
+  --padding-semantic-md: var(--semantic-md);
+  --padding-semantic-lg: var(--semantic-lg);
+  --padding-semantic-xl: var(--semantic-xl);
+  --padding-semantic-2xl: var(--semantic-2xl);
+  --padding-semantic-3xl: var(--semantic-3xl);
+  --padding-semantic-4xl: var(--semantic-4xl);
+  --padding-semantic-5xl: var(--semantic-5xl);
+
+  /* Shared radii */
+  --semantic-rounded-md: 6px;
+  --semantic-rounded-lg: 8px;
+  --semantic-rounded-lg-xl: 10px;
+  --semantic-rounded-xl: 12px;
+  --semantic-rounded-2xl: 16px;
+  --semantic-rounded-3xl: 24px;
+  --semantic-rounded-full: 9999px;
+
+  /* Shadows (source: variables/shaddows.jon) */
+  --shadow-2xs: 0px 1px 0px 0px rgba(55, 65, 81, 0.05);
+  --shadow-xs: 0px 1px 2px 0px rgba(55, 65, 81, 0.05);
+  --shadow-sm: 0px 1px 3px 0px rgba(55, 65, 81, 0.1), 0px 1px 2px -1px rgba(55, 65, 81, 0.1);
+  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0px 10px 15px -3px rgba(55, 65, 81, 0.1), 0px 4px 6px -4px rgba(55, 65, 81, 0.1);
+  --shadow-xl: 0px 20px 25px -5px rgba(55, 65, 81, 0.1), 0px 8px 10px -6px rgba(55, 65, 81, 0.1);
+  --shadow-2xl: 0px 25px 50px 12px rgba(55, 65, 81, 0.25);
+
+  /* Typography tokens from Figma */
+  --heading-1-weight: Bold;
+  --heading-1-font-size: 48px;
+  --heading-1-line-height: 56px;
+  --heading-1-spacing: 48px;
+  --heading-1-letter-spacing: -2px;
+
+  --heading-2-weight: Bold;
+  --heading-2-font-size: 30px;
+  --heading-2-line-height: 36px;
+  --heading-2-spacing: 30px;
+  --heading-2-letter-spacing: 0;
+
+  --heading-3-weight: Bold;
+  --heading-3-font-size: 24px;
+  --heading-3-line-height: 28px;
+  --heading-3-spacing: 20px;
+  --heading-3-letter-spacing: 0;
+
+  --heading-4-weight: Bold;
+  --heading-4-font-size: 20px;
+  --heading-4-line-height: 28px;
+  --heading-4-spacing: 20px;
+  --heading-4-letter-spacing: 0;
+
+  --monospaced-font-size: 16px;
+  --monospaced-line-height: 24px;
+  --monospaced-spacing: 16px;
+  --monospaced-letter-spacing: 0;
+  --monospaced-font-weight: Regular;
+
+  --paragraph-regular-weight: Regular;
+  --paragraph-regular-font-size: 16px;
+  --paragraph-regular-line-height: 24px;
+  --paragraph-regular-spacing: 16px;
+  --paragraph-regular-letter-spacing: 0;
+
+  --paragraph-small-font-size: 14px;
+  --paragraph-small-line-height: 22px;
+  --paragraph-small-spacing: 14px;
+  --paragraph-small-letter-spacing: 0;
+
+  --paragraph-mini-font-size: 12px;
+  --paragraph-mini-line-height: 16px;
+  --paragraph-mini-spacing: 12px;
+  --paragraph-mini-letter-spacing: 0;
+}

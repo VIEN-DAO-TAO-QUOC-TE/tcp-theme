@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Course Audience (BEM)
+   ========================================================================== */
+
+.c-course-audience {}
+
+.c-course-audience__inner {}
+
+.c-course-audience__header {}
+
+.c-course-audience__eyebrow {}
+
+.c-course-audience__title {}
+
+.c-course-audience__grid {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.c-course-audience__card {
+    display: flex;
+    min-width: 248px;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: var(--general-secondary, #F9FAFB);
+}
+
+.c-course-audience__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.c-course-audience__iconImg {
+    // actual icon image
+}
+
+.c-course-audience__icon--placeholder {
+    // placeholder if no icon
+}
+
+.c-course-audience__content {}
+
+.c-course-audience__cardTitle {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph small/medium */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    letter-spacing: 0.07px;
+}
+
+.c-course-audience__desc {}
+
+/* Modifiers */
+.c-course-audience--compact {}
+
+.c-course-audience__card--highlight {}

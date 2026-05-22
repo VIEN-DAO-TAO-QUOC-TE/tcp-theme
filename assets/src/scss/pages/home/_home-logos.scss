@@ -1,0 +1,16 @@
+.home-logos {
+    .c-section-header__eyebrow {
+        h2 {
+            color: #1F2937;
+            text-align: center;
+
+            /* heading 4 */
+            font-family: var(--font-definitions-font-family-headings, Inter);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: var(--heading-4-line-height, 140%);
+            /*  */
+            letter-spacing: var(--heading-4-letter-spacing, 0);
+        }
+    }
+}

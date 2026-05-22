@@ -1,0 +1,78 @@
+.row-small>.col,
+.row-small>.flickity-viewport>.flickity-slider>.col {
+    padding: 0 12px 24px;
+}
+
+.flickity-button {
+    // display: flex;
+    // width: 32px;
+    // height: 32px;
+    // padding: 7px;
+    // justify-content: center;
+    // align-items: center;
+    // border-radius: var(--semantic-rounded-full, 9999px);
+    // background: var(--general-secondary, #F9FAFB);
+}
+
+.slider {
+    .flickity-page-dots {
+        left: 7px;
+        right: unset;
+
+        .dot {
+            width: 32px;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--unofficial-accent-2, #E5E7EB);
+            opacity: 1 !important;
+
+            &.is-selected {
+                width: 8px;
+                height: 8px;
+                border-radius: 4px;
+                background: var(--gray-400, #9CA3AF);
+            }
+        }
+    }
+}
+
+.align-equal {
+    .flickity-slider>.col {
+        display: flex;
+        align-items: stretch;
+        min-height: 100%;
+
+        &>.col-inner>* {
+            height: 100%;
+        }
+    }
+}
+
+.learning-platform__gallery,
+.home-courses__grid {
+    &.flickity-enabled {
+        .flickity-button {
+            display: none;
+        }
+    }
+}
+
+.js-slider-nav {
+    .flickity-slider {
+        @include breakpoints-down(medium) {
+            &>.col {
+                max-width: 50% !important;
+                // padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        }
+
+        @include breakpoints-down(small) {
+            &>.col {
+                max-width: 80% !important;
+                // padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        }
+    }
+}

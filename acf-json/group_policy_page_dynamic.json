@@ -1,0 +1,268 @@
+[
+    {
+        "key": "group_policy_page_dynamic",
+        "title": "Policy Page Dynamic",
+        "fields": [
+            {
+                "key": "tab_tcp_policy_terms",
+                "label": "1. Terms Section",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 1
+            },
+            {
+                "key": "field_tcp_policy_terms_nav_label",
+                "label": "Terms nav label",
+                "name": "tcp_policy_terms_nav_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label shown in left menu.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Terms of Use",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_tcp_policy_terms_title",
+                "label": "Terms title",
+                "name": "tcp_policy_terms_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Main heading for Terms section.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Terms of Use",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_tcp_policy_terms_intro",
+                "label": "Terms intro content",
+                "name": "tcp_policy_terms_intro",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Opening content block shown under title.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "default_value": "",
+                "delay": 0
+            },
+            {
+                "key": "field_tcp_policy_toc_title",
+                "label": "Table of contents title",
+                "name": "tcp_policy_toc_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Table of Contents",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_tcp_policy_terms_toc",
+                "label": "Terms table of contents",
+                "name": "tcp_policy_terms_toc",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "One line per item.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "button_label": "Add item",
+                "min": 0,
+                "max": 0,
+                "rows_per_page": 20,
+                "collapsed": "",
+                "sub_fields": [
+                    {
+                        "key": "field_tcp_policy_terms_toc_item",
+                        "label": "Item",
+                        "name": "item",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_tcp_policy_terms_toc"
+                    }
+                ]
+            },
+            {
+                "key": "field_tcp_policy_terms_bottom",
+                "label": "Terms bottom content",
+                "name": "tcp_policy_terms_bottom",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Content block shown below table of contents.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "default_value": "",
+                "delay": 0
+            },
+            {
+                "key": "tab_tcp_policy_privacy",
+                "label": "2. Privacy Section",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "selected": 0
+            },
+            {
+                "key": "field_tcp_policy_privacy_nav_label",
+                "label": "Privacy nav label",
+                "name": "tcp_policy_privacy_nav_label",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Label shown in left menu.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Privacy Policy",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_tcp_policy_privacy_title",
+                "label": "Privacy title",
+                "name": "tcp_policy_privacy_title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "Main heading for Privacy section.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Privacy Policy",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_tcp_policy_privacy_content",
+                "label": "Privacy content",
+                "name": "tcp_policy_privacy_content",
+                "aria-label": "",
+                "type": "wysiwyg",
+                "instructions": "Content for Privacy Policy section.",
+                "required": 0,
+                "conditional_logic": false,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "default_value": "",
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "page-chinh-sach.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": "",
+        "pll_display_field_instructions": 1
+    }
+]

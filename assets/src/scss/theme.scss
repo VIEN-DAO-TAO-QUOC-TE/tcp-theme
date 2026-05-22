@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+/* -----------------------------------
+ * 1. CONFIGURATION
+ * ----------------------------------- */
+@import "base/fonts";
+
+@import 'utils/vars',
+'utils/mixins';
+
+/* -----------------------------------
+ * 2. BASE
+ * ----------------------------------- */
+@import 'base/reset',
+'base/typography';
+
+
+/* -----------------------------------
+ * 3. COMPONENTS (reusable)
+ * ----------------------------------- */
+
+@import 'components/index/';
+@import 'components/woocommerce/index/';
+@import 'components/woocommerce/course/index/';
+@import 'components/woocommerce/cart/index/';
+
+
+/* -----------------------------------
+ * 4. LAYOUT (global sections)
+ * ----------------------------------- */
+@import 'layout/index';
+
+/* -----------------------------------
+ * 5. PAGES
+ * ----------------------------------- */
+@import 'pages/index';
+
+/* -----------------------------------
+ * 6. SINGLES
+ * ----------------------------------- */
+@import 'singles/index';
+
+/* -----------------------------------
+ * 7. TAXONOMIES
+ * ----------------------------------- */
+@import 'taxonomies/index';
+
+/* -----------------------------------
+ * 8. Vendor
+ * ----------------------------------- */
+@import 'vendor/fancybox-custom';
+

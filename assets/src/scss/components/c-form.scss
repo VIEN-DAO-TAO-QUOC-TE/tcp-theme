@@ -1,0 +1,123 @@
+.c-form {
+
+    .c-form__submit {
+        width: 100%;
+    }
+}
+
+.c-form__grid {}
+
+.c-form__field {
+
+    input:not([type='submit']),
+    .button,
+    button,
+    fieldset,
+    select,
+    textarea {
+        border-radius: var(--semantic-rounded-lg, 8px);
+        border: 1px solid var(--general-border, #E5E7EB);
+        background: var(--general-input, #FFF);
+
+        /* shadow-xs */
+        box-shadow: var(--xs-x, 0) var(--xs-y, 1px) var(--xs-blur, 2px) var(--xs-spread, 0) var(--xs-color, rgba(55, 65, 81, 0.05));
+    }
+
+    &:last-of-type {
+
+        .button,
+        button,
+        fieldset,
+        input,
+        select,
+        textarea {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.c-form__required,
+.c-form__label {
+    /* paragraph small/medium */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--paragraph-small-line-height, 22px);
+    letter-spacing: 0.07px;
+}
+
+.c-form__label {
+    color: var(--general-foreground, #1F2937);
+}
+
+.c-form__required {
+    color: var(--red-600, #DC2626);
+}
+
+.c-form__actions {
+    input[type='submit'] {
+        margin-top: 24px;
+        margin-bottom: 0;
+    }
+
+    .wpcf7-spinner {
+        display: none;
+    }
+}
+
+.c-form__field--course,
+.c-form__field--schedules {
+    margin-top: 12px;
+}
+
+.c-form__hint {
+    margin: 4px 0 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--general-muted, #6B7280);
+}
+
+.c-form__checks {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px 16px;
+    margin-top: 8px;
+}
+
+.tcp-cdp-schedules__group {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px 16px;
+    width: 100%;
+}
+
+.tcp-cdp-schedules[data-empty="true"] .c-form__checks {
+    display: none;
+}
+
+.wpcf7 .c-form__check,
+.c-form__check {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        accent-color: #4f46e5;
+        cursor: pointer;
+    }
+}
+
+.c-form__check-mark {
+    display: none;
+}

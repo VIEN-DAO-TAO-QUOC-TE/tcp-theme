@@ -1,0 +1,391 @@
+/* Search results page — Figma node 6282:67509 (desktop) / 6282:67606 (mobile) */
+
+.tcp-search-page {
+  background: #fff;
+  color: #1f2937;
+}
+
+/* Hero section with search input */
+.tcp-search-page__hero {
+  background: #F3F4F6;
+  padding: 40px 20px;
+}
+
+.tcp-search-page__hero-inner {
+  max-width: 824px;
+  margin: 0 auto;
+}
+
+/* Search form */
+.tcp-search-form {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.tcp-search-form__field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.tcp-search-form__input {
+  width: 100%;
+  height: 42px;
+  padding: 9px 48px 9px 14px !important;
+  background: #fff !important;
+  color: #1f2937;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 14px;
+  line-height: 22px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.tcp-search-form__input::placeholder {
+  color: #9ca3af;
+}
+
+.tcp-search-form__input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+}
+
+.tcp-search-form__submit {
+  position: absolute;
+  top: 36%;
+  right: 8px;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+}
+
+@media (max-width: 549px) {
+  .tcp-search-form__submit {
+    top: 50%;
+  }
+}
+
+.tcp-search-form__submit:hover {
+  color: #4f46e5;
+}
+
+.tcp-search-form__submit svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Results shell */
+.tcp-search-page__results {
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+.tcp-search-page__shell {
+  max-width: 1248px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tcp-search-page__header {
+  margin-bottom: 24px;
+}
+
+.tcp-search-page__title {
+  margin: 0;
+  color: #1f2937;
+  font-family: var(--font-definitions-font-family-headings, Inter);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.tcp-search-page__subtitle {
+  margin: 8px 0 0;
+  color: #6b7280;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+/* Tabs */
+.tcp-search-page__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  margin-bottom: 24px;
+}
+
+.tcp-search-page__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  min-width: 32px;
+  padding: 5.5px 10px;
+  background: transparent;
+  color: #1f2937;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.07px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.tcp-search-page__tab:hover {
+  background: rgba(238, 242, 255, 0.6);
+}
+
+.tcp-search-page__tab.is-active {
+  background: #eef2ff;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+/* Empty state */
+.tcp-search-page__empty {
+  padding: 48px 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Course grid: rely on [ux_products] shortcode default layout */
+.tcp-search-page__grid--course {
+  /* Flatsome shortcode renders its own row/columns; nothing extra needed */
+}
+
+/* Blog grid: 4 cols desktop -> 1 col mobile */
+.tcp-search-page__grid--blog {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .tcp-search-page__grid--blog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 549px) {
+  .tcp-search-page__grid--blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Blog card — duplicated from .tcp-single-post__related .category-post-card
+   so single-post.css can remain untouched. Scoped under .tcp-search-page__grid--blog. */
+.tcp-search-page__grid--blog .category-post-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(55, 65, 81, 0.1), 0 1px 2px -1px rgba(55, 65, 81, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tcp-search-page__grid--blog .category-post-card:hover,
+.tcp-search-page__grid--blog .category-post-card:focus-within {
+  border-color: #c7d2fe;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.tcp-search-page__grid--blog .category-post-card__thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.tcp-search-page__grid--blog .category-post-card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.tcp-search-page__grid--blog .category-post-card__thumb:hover img {
+  transform: scale(1.02);
+}
+
+.tcp-search-page__grid--blog .category-post-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: #fff;
+}
+
+.tcp-search-page__grid--blog .category-post-card__title {
+  margin: 0;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #1f2937;
+}
+
+.tcp-search-page__grid--blog .category-post-card__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tcp-search-page__grid--blog .category-post-card__title a:hover {
+  color: #4f46e5;
+}
+
+.tcp-search-page__grid--blog .category-post-card__excerpt {
+  margin: 0;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.07px;
+  color: #1f2937;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tcp-search-page__grid--blog .category-post-card__meta {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.18px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.tcp-search-page__grid--blog .category-post-card__meta-sep {
+  color: #6366f1;
+  font-weight: 700;
+}
+
+/* Pagination */
+.tcp-search-page__pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.tcp-search-page__page {
+  display: inline-flex;
+}
+
+.tcp-search-page__page .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  min-width: 34px;
+  padding: 8px 16px;
+  background: transparent;
+  color: #6b7280;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.07px;
+  border: 0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.tcp-search-page__page--number .page-numbers {
+  width: 34px;
+  padding: 8px 0;
+}
+
+.tcp-search-page__page--current .page-numbers {
+  width: 34px;
+  padding: 8px 0;
+  border: 1px solid #d1d5db;
+  background: rgba(255, 255, 255, 0.1);
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.tcp-search-page__page--prev .page-numbers,
+.tcp-search-page__page--next .page-numbers {
+  color: #312e81;
+  font-weight: 500;
+}
+
+.tcp-search-page__page--dots .page-numbers {
+  color: #6b7280;
+}
+
+.tcp-search-page__page .page-numbers:hover {
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+.tcp-search-page__page--current .page-numbers:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #1f2937;
+}
+
+/* Mobile breakpoint */
+@media (max-width: 849px) {
+  .tcp-search-page__hero {
+    padding: 24px 20px 40px;
+  }
+
+  .tcp-search-page__shell {
+    padding: 0 20px;
+  }
+
+  .tcp-search-page__results {
+    padding-bottom: 56px;
+  }
+
+  .tcp-search-page__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .tcp-search-page__tabs {
+    gap: 8px;
+  }
+
+  .tcp-search-page__pagination {
+    margin-top: 32px;
+  }
+}

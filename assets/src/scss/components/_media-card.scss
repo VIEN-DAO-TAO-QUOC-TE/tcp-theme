@@ -1,0 +1,165 @@
+/* Component: Media Card (background image + bottom white panel)
+   Compatible with Flatsome: .box -> .box-image -> .box-text
+*/
+.c-media-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 358px;
+
+  border-radius: 16px;
+  background-blend-mode: color, normal;
+
+
+  &.box-overlay.dark .box-text,
+  &.box-shade.dark .box-text {
+    text-shadow: none;
+  }
+
+  /* đảm bảo box của Flatsome không tự phá layout */
+  &.box {
+    background: transparent;
+  }
+
+  /* Media / background */
+  .box-image {
+    position: relative;
+    height: 100%;
+
+    img,
+    .c-media-card__img {
+      width: 100%;
+      height: auto;
+      min-height: 358px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay,
+    .c-media-card__overlay {
+      pointer-events: none;
+    }
+  }
+
+  /* Panel trắng */
+  .box-text {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 12px;
+    width: calc(100% - 32px);
+    padding: 0;
+
+    /* Flatsome có thể set padding ở box-text-inner nên để inner handle */
+  }
+
+  .box-text .box-text-inner {
+    display: flex;
+    padding: var(--semantic-lg, 20px);
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: var(--semantic-xs, 8px);
+    flex: 1 0 0;
+    align-self: stretch;
+
+    border-radius: var(--absolute-radius-8, 8px);
+    background: var(--general-background, #FFF);
+
+    .c-media-card__title>* {
+      overflow: hidden;
+      color: var(--general-foreground, #1F2937);
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      word-break: break-word;
+      margin: 0;
+
+      /* paragraph/bold */
+      font-family: var(--font-definitions-font-family-body, Inter);
+      font-size: var(--paragraph-regular-font-size, 16px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: var(--paragraph-regular-line-height, 150%);
+      letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+    }
+
+    .c-media-card__desc,
+    .c-media-card__desc>* {
+      color: var(--general-muted-foreground, #6B7280);
+      font-family: var(--font-definitions-font-family-body, Inter);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: var(--paragraph-small-line-height, 157.143%);
+      letter-spacing: 0.07px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    .c-media-card__meta,
+    .c-media-card__meta>* {
+      color: var(--unofficial-foreground-alt, #374151);
+      font-family: var(--font-definitions-font-family-body, Inter);
+      font-size: var(--paragraph-mini-font-size, 12px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: var(--paragraph-mini-line-height, 133.333%);
+      letter-spacing: 0.18px;
+    }
+  }
+
+
+}
+
+/* Wrapper card: image + panel + button dán đáy, cùng border-radius */
+.home-card-info__card-col {
+  .c-media-card__wrap {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* Wrap đã handle border-radius/overflow → tắt ở .c-media-card */
+  .c-media-card {
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  /* Panel trắng dịch lên chừa chỗ cho button (16 + 44 + 8 = 68px) */
+  .c-media-card .box-text {
+    bottom: 68px;
+  }
+
+  /* CTA nằm trong card, cách 16px mỗi cạnh (left/right/bottom) */
+  .c-media-card__cta {
+    position: absolute !important;
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-height: 44px;
+    padding: 8px 16px;
+
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}

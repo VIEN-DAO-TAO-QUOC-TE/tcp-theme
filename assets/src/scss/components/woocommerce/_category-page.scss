@@ -1,0 +1,45 @@
+.category-page-row{
+    padding-top: 24px;
+}
+
+/* Keep 3 columns on iPad Pro for product category archive grids. */
+@media (min-width: 850px) and (max-width: 1366px) {
+    .post-type-archive-product ul.products.row .product-small.col,
+    .tax-product_cat ul.products .product-small.col,
+    .tax-product_cat .products .product-small.col,
+    .category-page-row ul.products.row .product-small.col,
+    .category-page-row .home-courses__grid .product-small.col,
+    .post-type-archive-product .home-courses__grid .product-small.col,
+    .tax-product_cat .home-courses__grid .product-small.col {
+        width: 33.333333% !important;
+        max-width: 33.333333% !important;
+        flex-basis: 33.333333% !important;
+    }
+
+    /* Override Flatsome default .large-columns-4 => 25% on iPad Pro. */
+    .post-type-archive-product .large-columns-4>.col,
+    .post-type-archive-product .medium-columns-4>.col,
+    .post-type-archive-product .large-columns-4 .flickity-slider>.col,
+    .post-type-archive-product .medium-columns-4 .flickity-slider>.col,
+    .tax-product_cat .large-columns-4>.col,
+    .tax-product_cat .medium-columns-4>.col,
+    .tax-product_cat .large-columns-4 .flickity-slider>.col,
+    .tax-product_cat .medium-columns-4 .flickity-slider>.col,
+    .category-page-row .large-columns-4>.col,
+    .category-page-row .medium-columns-4>.col,
+    .category-page-row .large-columns-4 .flickity-slider>.col,
+    .category-page-row .medium-columns-4 .flickity-slider>.col,
+    .home-courses__grid.large-columns-4>.col,
+    .home-courses__grid.medium-columns-4>.col,
+    .home-courses__grid.large-columns-4 .flickity-slider>.col,
+    .home-courses__grid.medium-columns-4 .flickity-slider>.col,
+    .home-courses__grid.large-columns-4 .product-small.col,
+    .home-courses__grid.medium-columns-4 .product-small.col,
+    .home-courses__grid.large-columns-4 .flickity-slider>.product-small.col,
+    .home-courses__grid.medium-columns-4 .flickity-slider>.product-small.col,
+    .home-courses__grid .flickity-slider>.product-small.col {
+        width: 33.333333% !important;
+        max-width: 33.333333% !important;
+        flex-basis: 33.333333% !important;
+    }
+}

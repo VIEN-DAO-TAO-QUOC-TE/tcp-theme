@@ -1,0 +1,111 @@
+/* Component: CTA Banner (split content + media)
+   File: assets/src/scss/components/_cta-banner.scss
+*/
+
+.c-cta-banner {
+  @include breakpoints-down(small) {
+    .c-cta-banner__layout-col>.col-inner {
+      min-height: 400px;
+
+
+    }
+  }
+
+  &__layout {
+    &.row-collapse {
+      .c-cta-banner__layout-col {
+
+        /* col wrapper */
+        @include breakpoints-down(medium) {
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+        }
+      }
+    }
+  }
+
+  &__layout-col {}
+
+  &__layout-col>.col-inner {
+    position: relative;
+    padding: 80px;
+    border-radius: var(--semantic-rounded-3xl, 24px);
+    background: var(--gray-100, #F3F4F6);
+
+    @include breakpoints-down(medium) {
+      padding: 40px;
+    }
+
+  }
+
+  /* Panel thật (row align-middle) */
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 0;
+  }
+
+  /* Left content */
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0;
+    display: flex;
+    padding-right: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+
+    h4 {
+      color: var(--general-foreground, #1F2937);
+
+      /* heading 2 */
+      font-family: var(--font-definitions-font-family-headings, Inter);
+      font-size: var(--heading-2-font-size, 30px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: var(--heading-2-line-height, 120%);
+      letter-spacing: var(--heading-2-letter-spacing, 0);
+
+      @include breakpoints-down(medium) {
+        font-size: 24px;
+        line-height: var(--heading-3-line-height, 116.667%);
+      }
+    }
+
+    .button {
+      margin-bottom: 0;
+    }
+
+
+  }
+
+  &__title {}
+
+  /* CTA button */
+  &__btn {}
+
+  /* Right media */
+  &__media {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    max-width: 746px;
+
+    @include breakpoints-down(medium) {
+      width: 80% !important;
+    }
+
+    @include breakpoints-down(small) {
+      width: 100% !important;
+    }
+
+    img {
+      aspect-ratio: 746/345;
+    }
+  }
+
+}

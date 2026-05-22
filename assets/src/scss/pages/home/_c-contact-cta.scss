@@ -1,0 +1,64 @@
+.c-contact-cta {
+    &__container {
+        &.row-collapse {
+            @include breakpoints-down(medium) {
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+            }
+        }
+
+        &>.col>.col-inner {
+            padding: 24px 24px 0;
+            border-radius: 40px;
+            background: var(--general-secondary, #F9FAFB);
+
+        }
+    }
+
+    &__card {}
+
+    &__media {
+        &>.col-inner {
+
+            .img,
+            .img-inner,
+            .img-inner>img {
+                height: 100%;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            object-position: top center;
+            border-radius: var(--semantic-rounded-3xl, 24px);
+        }
+    }
+
+    &__content {}
+
+    &__content-inner>.col>.col-inner {
+        // padding: 24px;
+        background: var(--general-secondary, #F9FAFB);
+
+        @include breakpoints-down(small) {
+            padding: 0;
+        }
+    }
+
+    &__form {
+        form {
+            margin-bottom: 0;
+        }
+        @include breakpoints-down(medium) {
+            margin-left: -30px !important;
+            margin-right: -30px !important;
+        }
+    }
+}
+
+.c-contact-cta__form>.col {
+    padding-bottom: 0;
+
+}
+
+.c-contact-cta__form>.col>.col-inner {}

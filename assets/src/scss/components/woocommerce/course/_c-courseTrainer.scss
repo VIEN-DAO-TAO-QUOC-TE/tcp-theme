@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Course Trainer (BEM)
+   ========================================================================== */
+
+.c-course-trainer {
+    margin-top: -80px;
+}
+
+.c-course-trainer__card {
+    // card container
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+
+    .c-course-trainer__media {
+        flex-shrink: 0;
+    }
+
+    .c-course-trainer__body {
+        flex: 1;
+    }
+}
+
+.c-course-trainer__top {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.c-course-trainer__media {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 8px;
+    border: 4px solid #FFF;
+
+    img {
+        object-fit: cover;
+        object-position: top center;
+        background: #E5E7EB;
+    }
+}
+
+.c-course-trainer__avatarLink {
+    // clickable avatar wrapper (when profile link exists)
+}
+
+.c-course-trainer__avatar {
+    // trainer avatar image
+}
+
+.c-course-trainer__avatar--placeholder {
+    // placeholder when no avatar
+}
+
+.c-course-trainer__body {
+    // right side content
+}
+
+.c-course-trainer__label {
+    // "Trainer" label
+}
+
+.c-course-trainer__name {
+    // trainer name heading
+}
+
+.c-course-trainer__nameLink {
+    // name as link
+}
+
+.c-course-trainer__title {
+    // role / company or inline title
+}
+
+.c-course-trainer__bio {
+    // short description/excerpt
+}
+
+.c-course-trainer__highlights {
+    // bullet list wrapper
+}
+
+.c-course-trainer__highlight {
+    // bullet item
+}
+
+/* Modifiers */
+.c-course-trainer--compact {
+    // smaller spacing variant
+}
+
+.c-course-trainer--with-cover {
+    // when trainer card overlaps hero cover (optional)
+}
+
+.c-course-trainer__card--overlap {
+    // overlap card style variant (optional)
+}
+
+.c-course-trainer__description {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--general-border, #E5E7EB);
+        margin-bottom: 40px;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,66 @@
+.c-courseQuota {
+    /* ==== Tokens ==== */
+    --quota-h: 24px; // chiều cao pill
+    --quota-r: 8px;
+    --quota-bg: #d1d5db; // gray-300
+    --quota-fill: #ea580c; // orange-600
+    --quota-text: #F9FAFB;
+
+    /* % fill: set từ inline style --quota-pct: 50% */
+    --quota-pct: 50%;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+
+    height: var(--quota-h);
+    border-radius: var(--quota-r);
+    background: var(--quota-bg);
+
+    overflow: hidden;
+    isolation: isolate; // để pseudo nằm dưới text
+
+    /* Fill bar */
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: var(--quota-pct);
+        background: var(--quota-fill);
+        border-radius: var(--quota-r);
+        z-index: 0;
+        transition: width 240ms ease;
+    }
+
+    /* Content nằm trên fill */
+    &__icon,
+    &__text {
+        position: relative;
+        z-index: 1;
+        color: var(--quota-text);
+        line-height: 1;
+        white-space: nowrap;
+        /* paragraph mini/bold */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-mini-font-size, 12px);
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.18px;
+    }
+    &__icon {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        img{
+            object-fit: contain;
+        }
+    }
+
+    /* Optional: nếu muốn canh text nằm giữa chính xác */
+    &--center {
+        justify-content: center;
+    }
+}

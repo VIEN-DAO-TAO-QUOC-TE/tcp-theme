@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Course Pain Points (BEM)
+   ========================================================================== */
+
+.c-course-painpoints {}
+
+.c-course-painpoints__inner {}
+
+.c-course-painpoints__header {}
+
+.c-course-painpoints__eyebrow {}
+
+.c-course-painpoints__title {}
+
+.c-course-painpoints__list {
+    list-style: none;
+
+    .c-course-painpoints__item {
+        margin-left: 0;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+.c-course-painpoints__item {
+    display: flex;
+    align-items: center;
+
+    .c-course-painpoints__icon {
+        margin-right: 20px;
+        color: #9CA3AF;
+    }
+
+}
+
+.c-course-painpoints__icon {}
+
+.c-course-painpoints__text {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph small/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    /*  */
+    letter-spacing: 0.07px;
+}
+
+/* Modifiers */
+.c-course-painpoints--compact {}
+
+.c-course-painpoints__item--emphasis {}

@@ -1,0 +1,236 @@
+/* About page > Section: GIVE (Growth · Integrity · Value · Educator's Heart) */
+
+:root {
+  --tc-blue: #3f4ab2;
+  --tc-orange: #ed6c36;
+  --tc-gray-bg: #f4f6f8;
+}
+
+.about-wrapper {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-wrapper .blue-color { color: var(--tc-blue); }
+.about-wrapper .accent-color { color: var(--tc-orange); }
+
+/* Hero */
+.section-hero {
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0;
+  position: relative;
+
+  .hero-card {
+    background: #fff;
+    padding: 50px;
+    width: 55%;
+    border-radius: 8px;
+  }
+
+  .hero-h1 {
+    font-size: 38px;
+    color: var(--tc-blue);
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 15px 0;
+  }
+
+  .hero-p {
+    font-size: 15px;
+    color: #666;
+  }
+
+  @include breakpoints-down(medium) {
+    padding: 60px 0;
+
+    .hero-card {
+      width: 100%;
+      padding: 30px;
+      margin-top: -80px;
+    }
+  }
+}
+
+/* G.I.V.E — Desktop */
+.section-give {
+  padding: 80px 0;
+
+  .give-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .give-item {
+    cursor: pointer;
+    padding: 0 8px;
+
+    .give-char {
+      display: inline-block;
+      font-size: 110px;
+      font-weight: 900;
+      color: var(--tc-blue);
+      line-height: 1;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    &:hover .give-char,
+    &.is-active .give-char {
+      color: var(--tc-orange);
+      transform: translateY(-4px);
+    }
+  }
+
+  .give-dot {
+    font-size: 40px;
+    color: var(--tc-orange);
+    margin: 0 25px;
+    line-height: 1;
+  }
+
+  .give-detail {
+    max-width: 720px;
+    margin: 32px auto 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    min-height: 120px;
+
+    &.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s;
+    }
+
+    &__label {
+      color: var(--tc-blue);
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    &__text {
+      color: #555;
+      font-size: 15px;
+      margin: 0;
+    }
+  }
+}
+
+/* G.I.V.E — Mobile (stacked, always visible) */
+.section-give-mobile {
+  padding: 40px 0;
+
+  .give-m-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .give-char-m {
+    flex: 0 0 64px;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--tc-blue);
+    line-height: 1;
+    margin: 0;
+  }
+
+  .give-m-info {
+    flex: 1;
+
+    strong {
+      display: block;
+      color: var(--tc-blue);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+    }
+  }
+
+  .give-m-divider {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 24px;
+    margin: 4px 0 20px;
+
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--tc-orange);
+    }
+  }
+}
+
+/* Team / C-Sherpa */
+.section-team {
+  background-color: var(--tc-gray-bg);
+  padding: 80px 0;
+
+  .sherpa-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 20px;
+    background-color: #eee;
+  }
+
+  .member-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+  }
+
+  .member-pos {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+  }
+}
+
+/* Contact */
+.section-contact {
+  .contact-box {
+    background: #f9f9f9;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 80px;
+  }
+
+  .contact-form-padding {
+    padding: 60px 40px;
+  }
+
+  .contact-img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

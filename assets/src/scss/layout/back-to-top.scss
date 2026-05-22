@@ -1,0 +1,36 @@
+/* Back to top button (Flatsome #top-link)
+   Flatsome .button.icon ép background-color/color = transparent/currentColor !important
+   → cần tăng specificity + !important để override
+*/
+button#top-link.back-to-top.button.icon {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+
+    background-color: var(--general-primary, #4F46E5) !important;
+    border-color: transparent !important;
+    color: #fff !important;
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3) !important;
+
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
+        background-color: var(--general-primary-hover, #4338CA) !important;
+        border-color: transparent !important;
+        color: #fff !important;
+        opacity: 1 !important;
+        box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4) !important;
+    }
+
+    > i,
+    .icon-chevron-up {
+        color: #fff !important;
+        font-size: 18px !important;
+        line-height: 1 !important;
+    }
+}

@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-regular-font-size, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-regular-line-height, 150%);
+    letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+}
+
+.absolute-footer,
+html {
+    background-color: var(--general-accent, #F3F4F6);
+}
+
+.container,
+.col,
+.columns,
+.gallery-item {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.col {
+    padding-bottom: 24px;
+}
+
+// Menu
+.nav-column>li>a,
+.nav-dropdown>li>a,
+.nav-vertical-fly-out>li>a,
+.nav>li>a {
+    color: var(--general-secondary-foreground, #312E81);
+
+}
+
+// font icon
+/* 1) Ép toàn bộ icon- dùng Lucide */
+i[class^="icon-"],
+i[class*=" icon-"],
+[class^="icon-"]:not(.icon-box-left),
+[class*=" icon-"]:not(.icon-box-left) {
+    font-family: "lucide" !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    speak: none !important;
+    text-transform: none !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

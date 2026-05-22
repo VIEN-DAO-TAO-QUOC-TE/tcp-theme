@@ -1,0 +1,60 @@
+/*
+ * Home courses grid: Flickity slider only on mobile (< 549px).
+ * On tablet and desktop, override Flickity's absolute-position layout
+ * back to a standard flex grid so the products show as a 2D list.
+ */
+@media (min-width: 549px) {
+  /* Restore overflow so all rows are visible */
+  .home-courses__grid.flickity-enabled {
+    overflow: visible !important;
+  }
+
+  .home-courses__grid.flickity-enabled .flickity-viewport {
+    overflow: visible !important;
+    height: auto !important;
+    touch-action: auto !important;
+  }
+
+  /* Make the slider a normal flex container instead of an absolutely-
+     positioned moving strip */
+  .home-courses__grid.flickity-enabled .flickity-slider {
+    position: static !important;
+    transform: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    /* replicate row-small gutter (10 px total → -5 px each side) */
+    margin-left: -5px !important;
+    margin-right: -5px !important;
+  }
+
+  /* Restore each slide to static flow with tablet column width */
+  .home-courses__grid.flickity-enabled .flickity-slider > .col {
+    position: static !important;
+    left: auto !important;
+    box-sizing: border-box !important;
+    /* padding-left: 5px !important; */
+    /* padding-right: 5px !important; */
+    /* tablet: medium-columns-3 */
+    flex-basis: 33.333% !important;
+    max-width: 33.333% !important;
+  }
+
+  /* Keep equal-height card interiors */
+  .home-courses__grid.flickity-enabled .flickity-slider > .col > .col-inner {
+    height: 100%;
+  }
+
+  /* Hide Flickity nav controls */
+  .home-courses__grid.flickity-enabled .flickity-button,
+  .home-courses__grid.flickity-enabled .flickity-page-dots {
+    display: none !important;
+  }
+}
+
+/* Desktop: large-columns-4 = 4 per row */
+@media (min-width: 849px) {
+  .home-courses__grid.flickity-enabled .flickity-slider > .col {
+    flex-basis: 25% !important;
+    max-width: 25% !important;
+  }
+}

@@ -1,0 +1,146 @@
+.admin-bar {
+    .c-course-stickyHeader {
+        top: 100px;
+    }
+}
+
+.c-course-stickyHeader {
+    display: none !important;
+    position: sticky;
+    top: 72px;
+    z-index: 9;
+    background: var(--general-accent, #F3F4F6);
+}
+
+.c-course-stickyHeader.is-visible {
+    display: block;
+}
+
+.c-course-stickyHeader__inner {
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+    align-self: stretch;
+}
+
+.c-course-stickyHeader__title {
+    display: flex;
+    width: 399px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--semantic-2xs, 4px);
+    align-self: stretch;
+
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-self: stretch;
+
+    color: var(--general-foreground, #1F2937);
+
+    /* heading 4 */
+    font-family: var(--font-definitions-font-family-headings, Inter);
+    font-size: var(--heading-4-font-size, 20px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--heading-4-line-height, 140%);
+    letter-spacing: var(--heading-4-letter-spacing, 0);
+}
+
+.c-course-stickyHeader__meta {
+    display: flex;
+    gap: 40px;
+}
+
+
+.c-course__sidebar.active {
+    .is-sticky-column {
+        z-index: 10;
+    }
+}
+
+// c-course-sidebar__card--top
+
+/* === Keyframes co/giãn chiều cao === */
+@keyframes tcpTopCollapse {
+    0% {
+        max-height: var(--tcp-top-max, 1000px);
+    }
+
+    50% {
+        max-height: 150px;
+    }
+
+    100% {
+        max-height: 0;
+    }
+}
+
+@keyframes tcpTopExpand {
+    0% {
+        max-height: 0;
+    }
+
+    50% {
+        max-height: 150px;
+    }
+
+    100% {
+        max-height: var(--tcp-top-max, 1000px);
+        // max-height: 1000px;
+    }
+}
+
+/* === Base === */
+.c-course-sidebar__card--top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+
+    overflow: hidden;
+
+    /* baseline: phải có max-height lớn để “auto-like” */
+    max-height: var(--tcp-top-max, 1000px);
+
+    opacity: 1;
+    transform: translateY(0);
+
+    will-change: max-height, opacity, transform;
+}
+
+/* === Hidden (collapse) === */
+.c-course-sidebar__card--top.is-hidden {
+    opacity: 0;
+    transform: translateY(-8px);
+
+    animation: tcpTopCollapse 360ms cubic-bezier(.2, .8, .2, 1) forwards;
+
+    /* fade/slide có delay nhẹ cho cảm giác co trước rồi mới mờ */
+    transition: opacity 200ms ease 60ms, transform 200ms ease 60ms;
+}
+
+/* === Show (expand) === */
+/* Khi remove is-hidden, ta cần 1 class để chạy animation expand */
+.c-course-sidebar__card--top.is-showing {
+    opacity: 1;
+    transform: translateY(0);
+
+    animation: tcpTopExpand 360ms cubic-bezier(.2, .8, .2, 1) forwards;
+
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+/* Disable animation/transition khi init để tránh flash */
+.c-course__sidebar.is-init .c-course-sidebar__card--top {
+    animation: none !important;
+    transition: none !important;
+}
+
+.c-course__sidebar.is-init [data-course-sticky-header],
+.is-init [data-course-sticky-header] {
+    transition: none !important;
+}

@@ -1,0 +1,64 @@
+/* Component: Section Header (eyebrow + title) */
+.c-section-header {
+    @include breakpoints-down(small) {
+        .button {
+            margin-bottom: 0;
+        }
+    }
+
+    &__row {}
+
+    &__col {
+        padding-bottom: 0;
+    }
+
+    &__eyebrow {
+        color: var(--gray-500, rgba(107, 114, 128, 1));
+
+        /* paragraph mini/bold */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 1.5%;
+        vertical-align: middle;
+        margin-bottom: 4px;
+
+        &>* {
+            color: inherit;
+            font: inherit;
+            letter-spacing: inherit;
+            line-height: inherit;
+            vertical-align: inherit;
+            margin-bottom: 0;
+        }
+    }
+
+    /* Main title */
+    &__title {
+        &>* {
+            /* heading 2 */
+            font-family: var(--font-definitions-font-family-headings, Inter);
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0;
+
+            @include breakpoints-down(medium) {
+                /* heading 3 */
+                font-size: 24px;
+                line-height: var(--heading-3-line-height, 116.667%);
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+
+    &__accent {}
+
+    /* Optional desc */
+    &__desc {
+        padding: 24px 0;
+    }
+}

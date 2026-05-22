@@ -1,0 +1,157 @@
+/* Scope vào checkout block */
+.wp-block-woocommerce-checkout .wc-block-components-text-input,
+.wp-block-woocommerce-checkout .wc-block-components-text-input-with-icon {
+    position: relative;
+
+}
+
+.wc-block-components-text-input {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.wp-block-woocommerce-checkout {}
+
+/* Label nằm trên */
+.wp-block-woocommerce-checkout .wc-block-components-text-input>label,
+.wp-block-woocommerce-checkout .wc-block-components-text-input-with-icon>label {
+    position: static !important;
+    transform: none !important;
+    display: block !important;
+
+    margin: 0 0 6px !important;
+    padding: 0 !important;
+
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* Input không cần chừa chỗ cho floating label */
+.wp-block-woocommerce-checkout .wc-block-components-text-input>input,
+.wp-block-woocommerce-checkout .wc-block-components-text-input-with-icon>input {
+    padding-top: 12px !important;
+}
+
+/* Tắt trạng thái floating khi focus/has value */
+.wp-block-woocommerce-checkout .wc-block-components-text-input.is-active>label,
+.wp-block-woocommerce-checkout .wc-block-components-text-input.has-value>label,
+.wp-block-woocommerce-checkout .wc-block-components-text-input-with-icon.is-active>label,
+.wp-block-woocommerce-checkout .wc-block-components-text-input-with-icon.has-value>label {
+    transform: none !important;
+}
+
+/* Nếu label có overlay/background */
+.wp-block-woocommerce-checkout .wc-block-components-text-input>label::before,
+.wp-block-woocommerce-checkout .wc-block-components-text-input-with-icon>label::before {
+    content: none !important;
+}
+
+.wc-block-components-title.wc-block-components-checkout-step__title {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph/bold */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-regular-font-size, 16px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--paragraph-regular-line-height, 150%);
+    letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+}
+
+.wc-block-components-checkout-step__heading-container {
+    margin-bottom: 24px;
+}
+
+
+.wc-block-components-form .wc-block-components-text-input input[type=email],
+.wc-block-components-form .wc-block-components-text-input input[type=number],
+.wc-block-components-form .wc-block-components-text-input input[type=password],
+.wc-block-components-form .wc-block-components-text-input input[type=tel],
+.wc-block-components-form .wc-block-components-text-input input[type=text],
+.wc-block-components-form .wc-block-components-text-input input[type=url],
+.wc-block-components-text-input input[type=email],
+.wc-block-components-text-input input[type=number],
+.wc-block-components-text-input input[type=password],
+.wc-block-components-text-input input[type=tel],
+.wc-block-components-text-input input[type=text],
+.wc-block-components-text-input input[type=url],
+.tcp-elearn input[type=email] {
+    display: flex;
+    padding: 8px var(--absolute-3, 12px);
+    align-items: center;
+    gap: var(--semantic-xs, 8px);
+    align-self: stretch;
+
+    border-radius: var(--semantic-rounded-lg, 8px);
+    border: 1px solid var(--general-border, #E5E7EB);
+    background: var(--general-input, #FFF);
+
+    /* shadow-xs */
+    box-shadow: var(--xs-x, 0) var(--xs-y, 1px) var(--xs-blur, 2px) var(--xs-spread, 0) var(--xs-color, rgba(55, 65, 81, 0.05));
+}
+
+.wc-block-checkout__billing-fields {
+    .screen-reader-text {
+        display: none;
+    }
+}
+
+.form-row {
+    .label {
+        color: var(--general-foreground, #1F2937);
+
+        /* paragraph small/medium */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: var(--paragraph-small-line-height, 157.143%);
+        letter-spacing: 0.07px;
+        margin-bottom: 4px;
+
+        .required {
+            color: var(--red-500, #EF4444);
+        }
+    }
+
+    .woocommerce-input-wrapper {}
+}
+
+.woocommerce-input-wrapper {
+
+    label {
+        display: flex !important;
+        height: 24px;
+        align-items: center;
+        gap: var(--semantic-xs, 8px);
+
+        .optional {
+            display: none;
+        }
+    }
+
+    input {
+        display: flex;
+        padding: 8px var(--absolute-3, 12px);
+        align-items: center;
+        gap: var(--semantic-xs, 8px);
+        align-self: stretch;
+        border-radius: var(--semantic-rounded-lg, 8px);
+        border: 1px solid var(--general-border, #E5E7EB);
+        background: var(--general-input, #FFF);
+
+        /* shadow-xs */
+        box-shadow: var(--xs-x, 0) var(--xs-y, 1px) var(--xs-blur, 2px) var(--xs-spread, 0) var(--xs-color, rgba(55, 65, 81, 0.05));
+
+        color: var(--general-muted-foreground, #6B7280);
+
+        /* paragraph small/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-small-line-height, 157.143%);
+        letter-spacing: 0.07px;
+    }
+}

@@ -1,0 +1,106 @@
+/* Home > Section: CTA */
+.home-cta {
+
+
+
+    /* ===== Layout wrapper (row ngoài) ===== */
+    &__layout {
+        @include breakpoints-down(medium) {
+            &.row-collapse>.col {
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+            }
+        }
+    }
+
+    &__layout-col {}
+
+    &__layout-col>.col-inner {
+        padding: var(--semantic-2xl, 32px);
+        border-radius: var(--semantic-rounded-2xl, 16px);
+        background: linear-gradient(90deg, var(--indigo-700, #4338CA) 0%, var(--indigo-800, #3730A3) 100%);
+    }
+
+    /* ===== Panel CTA (row trong) ===== */
+    &__panel {
+        &--main {}
+
+        &--main>.col-inner {}
+    }
+
+    /* ===== Columns trong panel ===== */
+    &__panel-col {
+        padding-bottom: 0;
+
+        @include breakpoints-down(small) {
+            padding-bottom: 24px;
+        }
+
+        &--content {
+
+            color: #F9FAFB;
+
+            h4 {
+                color:#F9FAFB;
+                font-family: var(--font-definitions-font-family-headings, Inter);
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+
+        &--content>.col-inner {}
+
+        &--actions {
+            @include breakpoints-down(small) {
+                padding-bottom: 0;
+            }
+
+            .button {
+                margin: 0;
+                &.white span {
+                    font-family: var(--font-definitions-font-family-headings, Inter);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: #312E81;
+                    letter-spacing: 0.07px;
+                }
+
+                &.primary span {
+                    font-family: var(--font-definitions-font-family-headings, Inter);
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 22px;
+                    color: #F9FAFB;
+                    letter-spacing: 0.07px;
+                }
+            }
+
+            .col-inner {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+
+                @include breakpoints-down(small) {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .gap-element {
+        @include breakpoints-down(medium) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+body.tcp-woocommerce.post-type-archive-product .about-breadcrumb,
+body.tcp-woocommerce.tax-product_cat .about-breadcrumb,
+body.tcp-woocommerce.tax-product_tag .about-breadcrumb {
+  padding-top: 40px;
+  margin-bottom: 20px;
+
+  @media (max-width: 549px) {
+    padding-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+.rank_math_the_breadcrumbs {
+    margin-bottom: var(--semantic-lg, 24px);
+}
+
+.rank-math-breadcrumb {
+    &>p {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        margin: 0;
+        line-height: var(--paragraph-small-line-height, 22px);
+
+        a,
+        span {
+            color: var(--general-muted-foreground, #6B7280);
+
+            /* paragraph small/regular */
+            font-family: var(--font-definitions-font-family-body, Inter);
+            font-size: var(--paragraph-small-font-size, 14px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--paragraph-small-line-height, 22px);
+            letter-spacing: 0.07px;
+        }
+
+        a:hover {
+            color: var(--general-foreground, #1F2937);
+        }
+
+        .separator {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            color: var(--general-muted-foreground, #6B7280);
+            font-family: "lucide" !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            speak: none !important;
+            text-transform: none !important;
+            line-height: 1 !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 0;
+            text-indent: -9999em;
+            overflow: hidden;
+
+            &::before {
+                content: "\e06f";
+                font-size: 16px;
+                text-indent: 0;
+                display: inline-block;
+            }
+        }
+
+        .last {
+            color: var(--general-foreground, #1F2937);
+            font-weight: 700;
+        }
+    }
+
+    &>p>a {
+        line-height: 1;
+
+        &:has(svg) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                fill: var(--Black-300, #B0B0B0);
+
+                path {
+                    fill: var(--Black-300, #B0B0B0);
+                }
+            }
+
+            &:hover {
+                svg {
+                    path {
+                        fill: var(--blue);
+                    }
+                }
+            }
+        }
+    }
+}

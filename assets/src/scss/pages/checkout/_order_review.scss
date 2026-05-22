@@ -1,0 +1,10 @@
+#order_review {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex-shrink: 0;
+    & > *{
+        width: 100%;
+    }
+}

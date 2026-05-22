@@ -1,0 +1,56 @@
+.c-checkout-billing__elearning {
+    .c-checkout-billing__elearning-title {
+        color: var(--general-foreground, #1F2937);
+
+        /* paragraph/bold */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-regular-font-size, 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: var(--paragraph-regular-line-height, 150%);
+        letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+        margin-bottom: 4px;
+    }
+
+    .c-checkout-billing__elearning-desc {
+        color: var(--general-muted-foreground, #6B7280);
+
+        /* paragraph small/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-small-line-height, 157.143%);
+        letter-spacing: 0.07px;
+    }
+
+    .c-checkout-billing__elearning-fields {
+        margin-top: 24px;
+    }
+}
+
+.c-checkout-billing__elearning-fields {
+    .c-elearning-email {}
+}
+
+.c-elearning-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+
+    .c-elearning-head__title {
+        display: flex;
+        height: 21px;
+        padding-right: 112px;
+        align-items: center;
+        flex: 1 0 0;
+    }
+
+    .c-elearning-head__toggle {
+        display: flex;
+        height: 24px;
+        align-items: center;
+        gap: var(--semantic-xs, 8px);
+    }
+}

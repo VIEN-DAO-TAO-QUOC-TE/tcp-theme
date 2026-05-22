@@ -1,0 +1,92 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-border; }
+  html { @apply antialiased; }
+  body { @apply bg-background text-foreground font-sans; }
+}
+
+/* “Primitive components” kiểu shadcn */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium
+           transition-colors
+           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-secondary-foreground hover:bg-foreground/5;
+  }
+
+  .btn-outline {
+    @apply btn border border-border bg-transparent hover:bg-foreground/5;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent hover:bg-foreground/5;
+  }
+
+  .btn-destructive {
+    @apply btn bg-destructive text-primary-foreground hover:opacity-90;
+  }
+
+  .input {
+    @apply w-full rounded-md border border-border bg-background px-3 py-2 text-sm
+           placeholder:text-muted-foreground
+           focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  .select {
+    @apply w-full rounded-md border border-border bg-background px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  .textarea {
+    @apply w-full rounded-md border border-border bg-background px-3 py-2 text-sm
+           placeholder:text-muted-foreground
+           focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+
+  .label {
+    @apply text-sm font-medium leading-none;
+  }
+
+  .help-text {
+    @apply text-xs text-muted-foreground;
+  }
+
+  .card {
+    @apply rounded-xl border border-border bg-card text-card-foreground;
+  }
+
+  .card-header { @apply p-6 pb-3; }
+  .card-content { @apply p-6 pt-0; }
+
+  /* Alerts for Woo notices */
+  .alert {
+    @apply card px-4 py-3 text-sm;
+  }
+  .alert-info {
+    @apply alert;
+  }
+  .alert-success {
+    @apply alert;
+  }
+  .alert-error {
+    @apply alert;
+  }
+  .alert-title {
+    @apply font-medium;
+  }
+  .alert-desc {
+    @apply mt-1 text-muted-foreground;
+  }
+}

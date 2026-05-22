@@ -1,0 +1,122 @@
+/* ==========================================================================
+   Course Curriculum (BEM)
+   ========================================================================== */
+
+.c-course-curriculum {}
+
+.c-course-curriculum__inner {}
+
+.c-course-curriculum__header {}
+
+.c-course-curriculum__eyebrow {}
+
+.c-course-curriculum__title {}
+
+.c-course-curriculum__summary {}
+
+.c-course-curriculum__accordion {
+  padding: 0 24px;
+  border-radius: 16px;
+  background: var(--general-secondary, #F9FAFB);
+}
+
+/* Module content inside accordion item */
+.c-course-curriculum__moduleDesc {}
+
+.c-course-curriculum__lessons {
+  list-style: none;
+
+  .c-course-curriculum__lesson {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.c-course-curriculum__lesson {
+  display: flex;
+  min-height: 38px;
+  padding-block: 8px;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+
+  @media (max-width: 549px) {
+    gap: 12px;
+  }
+
+
+  .c-course-curriculum__lessonTitle {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.c-course-curriculum__lessonTitle {
+  color: var(--general-foreground, #1F2937);
+
+  /* paragraph small/medium */
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: var(--paragraph-small-font-size, 14px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--paragraph-small-line-height, 157.143%);
+  letter-spacing: 0.07px;
+}
+
+.c-course-curriculum__lessonMeta {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.c-course-curriculum__lessonPreview {
+  display: flex;
+  min-height: 24px;
+  padding: 4px var(--semantic-xs, 8px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--absolute-15, 6px);
+
+  color: var(--indigo-700, #4338CA);
+  text-align: center;
+
+  /* paragraph mini/medium */
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: var(--paragraph-mini-font-size, 12px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--paragraph-mini-line-height, 133.333%);
+  letter-spacing: 0.18px;
+
+  [class^=icon-] {
+    font-size: 16px;
+    color: #4F46E5;
+  }
+}
+
+.c-course-curriculum__lessonDur {
+  color: var(--general-muted-foreground, #6B7280);
+  text-align: right;
+
+  /* paragraph small/regular */
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: var(--paragraph-small-font-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--paragraph-small-line-height, 157.143%);
+  letter-spacing: 0.07px;
+}
+
+/* Optional: target Flatsome accordion classes */
+.c-course-curriculum__accordion {
+  .accordion {}
+
+  .accordion-item {}
+
+  .accordion-title {}
+
+  .accordion-inner {}
+}

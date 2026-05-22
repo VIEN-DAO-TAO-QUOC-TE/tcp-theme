@@ -1,0 +1,42 @@
+.logo-slider {
+
+    .logo-slider__swiper {}
+
+    .img {
+        height: 115.2px;
+        width: auto !important;
+
+    }
+
+    .img>.img-inner {}
+
+    .img>.img-inner>img {
+        height: 115.2px;
+        width: auto;
+    }
+}
+
+.logo-slider__swiper {
+    &.col{
+        padding-bottom: 0;
+    }
+    overflow: hidden;
+    display: flex;
+
+    .col-inner {
+        display: block;
+        white-space: nowrap;
+        will-change: transform;
+        mix-blend-mode: overlay;
+        width: auto;
+
+        img {
+            margin-bottom: 0;
+        }
+    }
+
+    &>.col-inner>.img {
+        display: inline-block;
+        margin-right: 16px;
+    }
+}

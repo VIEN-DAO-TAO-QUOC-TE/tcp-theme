@@ -1,0 +1,182 @@
+/* =========================================
+   Search Lightbox — matches Figma "Input" (6293:55233)
+   Pill-shaped input with right-aligned search icon.
+   ========================================= */
+
+#search-lightbox {
+    width: 420px;
+    max-width: calc(100vw - 48px);
+    margin: 0 !important;
+    padding: 0;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    .searchform-wrapper {
+        max-width: 420px;
+        margin: 0;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+
+    .searchform {
+        margin: 0;
+    }
+
+    .searchform .flex-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        border: 1px solid #E5E7EB;
+        border-radius: 9999px;
+        padding: 8px 12px;
+        box-shadow:
+            0 10px 15px -3px rgba(55, 65, 81, 0.10),
+            0 4px 6px -4px rgba(55, 65, 81, 0.10);
+        overflow: hidden;
+    }
+
+    .searchform .flex-col {
+        padding: 0 !important;
+    }
+
+    .searchform .search-field {
+        width: 100% !important;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 22px !important;
+        height: 22px !important;
+        line-height: 22px !important;
+        font-family: inherit !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        color: #1F2937 !important;
+        letter-spacing: 0.07px;
+
+        &::placeholder {
+            color: #6B7280 !important;
+            opacity: 1;
+        }
+
+        &:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    .searchform .ux-search-submit {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-width: 20px !important;
+        min-height: 20px !important;
+        width: 20px !important;
+        height: 20px !important;
+        color: #6B7280 !important;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+
+        &:hover,
+        &:focus {
+            background: transparent !important;
+            color: #1F2937 !important;
+        }
+
+        .icon-search {
+            font-size: 16px;
+            line-height: 1;
+        }
+    }
+
+    .live-search-results {
+        margin-top: 8px;
+        max-height: 60vh;
+        overflow-y: auto;
+
+        &:empty {
+            display: none;
+        }
+
+        &:not(:empty) {
+            background: #fff;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            box-shadow:
+                0 10px 15px -3px rgba(55, 65, 81, 0.10),
+                0 4px 6px -4px rgba(55, 65, 81, 0.10);
+        }
+    }
+}
+
+/* Position the popup via .mfp-content (absolute inside .mfp-wrap, which is
+   already position:fixed by MFP). Avoids issues with `position: fixed` on
+   #search-lightbox itself when an ancestor has a transform that breaks the
+   viewport-relative containing block. */
+.mfp-content:has(#search-lightbox) {
+    position: absolute !important;
+    top: 120px !important;
+    right: 24px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: auto !important;
+    max-width: 420px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    z-index: 1046;
+
+    @include breakpoints-down(medium) {
+        top: 58px !important;
+    }
+}
+
+/* Reset any transforms/filters/will-change MFP applies during animation
+   that would create a new containing block. */
+.mfp-bg:has(+ .mfp-wrap #search-lightbox),
+.mfp-wrap:has(#search-lightbox),
+.mfp-container:has(#search-lightbox),
+.mfp-content:has(#search-lightbox) {
+    transform: none !important;
+    perspective: none !important;
+    filter: none !important;
+    will-change: auto !important;
+}
+
+.mfp-container:has(#search-lightbox) {
+    padding: 0 !important;
+    position: static !important;
+
+    &::before {
+        display: none !important;
+        content: none !important;
+    }
+}
+
+/* Hide the dark/blur backdrop — popup is now an inline dropdown.
+   Clicks outside the input still close it via .mfp-wrap. */
+.mfp-bg.mfp-ready:has(+ .mfp-wrap #search-lightbox) {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.mfp-wrap:has(#search-lightbox) {
+    background: transparent !important;
+}
+
+/* Prevent MFP from adding right-padding to <html> to compensate for the
+   hidden scrollbar — that's the vertical empty strip on the right. */
+html.mfp-helper:has(#search-lightbox.mfp-ready),
+html:has(.mfp-wrap #search-lightbox) {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    overflow: auto !important;
+}

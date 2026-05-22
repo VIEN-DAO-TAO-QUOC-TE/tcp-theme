@@ -1,0 +1,51 @@
+.woocommerce-checkout-payment {}
+
+.woocommerce-checkout-payment__header {
+    margin-bottom: 24px;
+
+    .woocommerce-checkout-payment__title {
+        margin-bottom: 4px !important;
+    }
+}
+
+.woocommerce-checkout-payment__title {}
+
+.woocommerce-checkout-payment__description {
+    color: var(--general-muted-foreground, #6B7280);
+
+    /* paragraph small/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    /*  */
+    letter-spacing: 0.07px;
+}
+
+#payment {
+    .wc_payment_methods {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--semantic-md, 16px);
+        align-self: stretch;
+
+        .wc_payment_method {
+            // display: flex;
+            // align-items: flex-start;
+            // gap: var(--semantic-xs, 8px);
+            // align-self: stretch;
+
+            padding: var(--semantic-xs, 8px) var(--absolute-3, 12px);
+            border-radius: var(--semantic-rounded-lg-xl, 10px);
+            border: 1px solid var(--general-border, #E5E7EB);
+            background: var(--card-card, #FFF);
+            width: 100%;
+            input{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+span.amount {
+    color: var(--general-muted-foreground, #6B7280);
+}
+
+.price {
+    del {
+        .amount {
+            overflow: hidden;
+            color: var(--general-muted-foreground, #6B7280);
+            text-overflow: ellipsis;
+
+            /* paragraph small/regular */
+            font-family: var(--font-definitions-font-family-body, Inter);
+            font-size: var(--paragraph-small-font-size, 14px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--paragraph-small-line-height, 157.143%);
+            letter-spacing: 0.07px;
+            text-decoration-line: line-through;
+        }
+    }
+
+    ins {
+        .amount {
+            overflow: hidden;
+            color: var(--orange-500, #F97316);
+            text-overflow: ellipsis;
+
+            /* heading 4 */
+            font-family: var(--font-definitions-font-family-headings, Inter);
+            font-size: var(--heading-4-font-size, 20px);
+            font-style: normal;
+            font-weight: 700;
+            line-height: var(--heading-4-line-height, 140%);
+            letter-spacing: var(--heading-4-letter-spacing, 0);
+        }
+    }
+}

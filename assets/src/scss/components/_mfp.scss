@@ -1,0 +1,14 @@
+.mfp-bg {
+    .mfp-content {
+        background-color: var(--general-background, #FFF);
+
+        /* shadow-lg */
+        box-shadow: var(--lg-shadow-1-x, 0) var(--lg-shadow-1-y, 10px) var(--lg-shadow-1-blur, 15px) var(--lg-shadow-1-spread, -3px) var(--lg-color, rgba(55, 65, 81, 0.10)), var(--lg-shadow-2-x, 0) var(--lg-shadow-2-y, 4px) var(--lg-shadow-2-spread, 6px) var(--lg-shadow-2-blur, -4px) var(--lg-color, rgba(55, 65, 81, 0.10));
+    }
+}
+
+.mfp-bg.mfp-ready {
+    background-color: rgba(0, 0, 0, 0.50) !important;
+    backdrop-filter: blur(8px);
+    opacity: 1;
+}

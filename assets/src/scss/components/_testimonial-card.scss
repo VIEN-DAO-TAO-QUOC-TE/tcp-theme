@@ -1,0 +1,150 @@
+/* =========================================
+   Component: Testimonial Card
+   Block: .c-testimonial-card
+   ========================================= */
+
+.c-testimonial-card {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 16px;
+  background: var(--general-background, #FFF);
+
+  @include breakpoints-down(medium) {
+    flex-direction: column-reverse;
+  }
+
+  &__quote {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    flex: 1;
+
+    @include breakpoints-down(medium) {
+      flex-direction: column;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    border: unset;
+    padding: 0;
+
+    flex: 1 0 0;
+
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-regular-font-size, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-regular-line-height, 150%);
+    letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+    margin-bottom: 0;
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+
+
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  &__avatar {
+    display: flex;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+
+      background: var(--unofficial-accent-2, #E5E7EB);
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    flex: 1 0 0;
+  }
+
+  &__name {
+    color: var(--indigo-600, #4F46E5);
+
+    /* paragraph small/bold */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    letter-spacing: 0.07px;
+    margin-bottom: 0;
+  }
+
+  &__meta {
+    color: var(--general-muted-foreground, #6B7280);
+
+    /* paragraph small/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    letter-spacing: 0.07px;
+    margin-bottom: 0;
+  }
+
+  /* ===== Modifiers (nếu cần) ===== */
+  &--center {
+    /* center layout variation */
+  }
+
+  &--dark {
+    /* dark theme variation */
+  }
+
+  &--compact {
+    /* compact spacing variation */
+  }
+
+  /* ===== States (nếu cần) ===== */
+  &.is-active {
+    /* active state */
+  }
+}
+
+.divider-line {
+  display: flex;
+  height: 1px;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  background: var(--general-border, #E5E7EB);
+  margin-top: 24px;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,168 @@
+/* Component: Profile Card (Flatsome box) */
+.c-profile-card {
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 424px;
+    background: var(--tcp-card-bg, radial-gradient(122.11% 100% at 20.24% -0.1%, var(--gray-50, #F9FAFB) 0%, var(--gray-200, #E5E7EB) 100%)), var(--card-card, #FFF);
+
+    .c-profile-card__media,
+    .box-image {
+        position: relative;
+
+        img {
+            width: 294px;
+            height: 294px;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            object-position: bottom right;
+        }
+
+        img.c-profile-card__img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .c-profile-card__overlay {
+            pointer-events: none;
+        }
+    }
+
+    .box-image {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .box-image>div {
+        .overlay {
+            display: none;
+        }
+    }
+
+    .box-text {
+        padding: 24px;
+        bottom: unset;
+        top: 0;
+        text-shadow: none !important;
+    }
+
+    .box-text>.box-text-inner>h4 {
+        color: var(--general-foreground, #1F2937);
+
+        /* heading 4 */
+        font-family: var(--font-definitions-font-family-headings, Inter);
+        font-size: var(--heading-4-font-size, 20px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: var(--heading-4-line-height, 140%);
+        /* 140% */
+        letter-spacing: var(--heading-4-letter-spacing, 0);
+    }
+
+    .box-text>.box-text-inner>p {
+        color: var(--general-muted-foreground, #6B7280);
+
+        /* paragraph small/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-small-line-height, 157.143%);
+        /* 157.143% */
+        letter-spacing: 0.07px;
+    }
+
+    .c-profile-card__inner {
+        padding: 16px;
+    }
+
+    .c-profile-card__title {
+        margin: 0 0 6px 0;
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    .c-profile-card__meta {
+        margin: 0;
+        font-size: 12px;
+        opacity: 0.75;
+    }
+
+    &.c-profile-card--about {
+        transition: background 0.25s ease, box-shadow 0.25s ease;
+
+        .box-image>div {
+            position: relative;
+
+            .overlay {
+                display: none;
+            }
+        }
+
+        .box-text {
+            top: 0;
+            bottom: 0;
+            display: flex;
+            padding: 24px;
+        }
+
+        .box-text>.box-text-inner {
+            width: 100%;
+        }
+
+        .c-profile-card__link {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            min-height: 100%;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .c-profile-card__cta {
+            margin-top: auto;
+            margin-bottom: 10px;
+            width: 100%;
+            min-height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: var(--general-primary, rgba(79, 70, 229, 1));
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+            box-shadow: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+        }
+
+        &:hover,
+        &:focus-within {
+            background: radial-gradient(122.11% 100% at 20.24% -0.1%, #F9FAFB 0%, #C7D2FE 100%);
+
+            .c-profile-card__cta {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+        }
+
+        @media (hover: none) {
+            .c-profile-card__cta {
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                pointer-events: auto;
+            }
+        }
+    }
+}

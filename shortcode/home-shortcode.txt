@@ -1,0 +1,488 @@
+[section label="learning-platform" bg_color="rgb(248, 250, 252)" class="learning-platform"]
+
+[row label="Titile" class="learning-platform__row learning-platform__row--title"]
+
+[col span__sm="12" class="learning-platform__col learning-platform__col--title"]
+
+<h1>Nền tảng học tập ứng dụng tích hợp<br />
+<span style="color: #ea580c;">cố vấn, đào tạo và tư vấn</span></h1>
+
+[/col]
+
+[/row]
+[row label="Hero Banner" class="learning-platform__row learning-platform__row--hero"]
+
+[col label="Desktop" span__sm="12" class="learning-platform__col learning-platform__col--hero" visibility="hide-for-small"]
+
+[ux_gallery ids="72,71,67,66" style="default" lightbox="false" type="slider" width="full-width" columns="2" slider_nav_style="circle" slider_bullets="true" auto_slide="4000" image_size="original" class="learning-platform__gallery"]
+
+
+[/col]
+[col label="Mobile" span__sm="12" class="learning-platform__col learning-platform__col--hero" visibility="show-for-small"]
+
+[ux_gallery ids="304,305,306" style="default" lightbox="false" type="slider" width="full-width" columns="2" slider_nav_style="circle" slider_bullets="true" auto_slide="4000" image_size="original" class="learning-platform__gallery"]
+
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="KHÓA HỌC" bg_color="rgb(255, 255, 255)" class="home-courses c-section c-section-header"]
+
+[row class="home-courses__row home-courses__row--header c-section__header c-section-header__row"]
+
+[col span__sm="12" class="home-courses__col home-courses__col--header c-section-header__col"]
+
+[ux_text class="c-section-header__eyebrow"]
+
+KHÓA HỌC
+[/ux_text]
+[ux_text class="c-section-header__title"]
+
+<h2>Những kỹ năng <span style="color: #EA580C;">định hình tư duy và khả năng lãnh đạo</span></h2>
+[/ux_text]
+
+[/col]
+
+[/row]
+[ux_products columns__sm="1" slider_nav_style="simple" infinitive="false" equalize_box="true" ids="479,472,517,487" class="home-courses__grid c-product-grid has-equal-box-heights"]
+
+[gap height="16px"]
+
+[row class="home-courses__cta"]
+
+[col span__sm="12" align="center"]
+
+[button text="Xem toàn bộ khóa học" color="white" radius="10" icon="icon-arrow-right" link="/cac-khoa-hoc/" target="_blank"]
+
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="home-cta" bg_color="rgb(255, 255, 255)" class="home-cta c-section"]
+
+[row label="home-cta__layout" style="collapse" class="home-cta__layout last-reset"]
+
+[col label="home-cta__layout-col" span__sm="12" class="home-cta__layout-col"]
+
+[row_inner label="home-cta__panel" v_align="middle" class="home-cta__panel home-cta__panel--main"]
+
+[col_inner label="Text" span="7" span__sm="12" class="home-cta__panel-col home-cta__panel-col--content"]
+
+<h4>Bắt đầu hành trình trở thành nhà lãnh đạo</h4>
+<p>Đăng ký để nhận ưu đãi và các khóa học mới nhất từ Talent Connect Plus</p>
+
+[/col_inner]
+[col_inner label="CTA" span="5" span__sm="12" align="right" class="home-cta__panel-col home-cta__panel-col--actions"]
+
+[button text="Tìm Hiểu Thêm" color="white" radius="10" link="#" target="_blank"]
+
+[button text="Đăng Ký Ngay" radius="10" link="#" target="_blank"]
+
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="home-trainers c-section" class="home-trainers c-section c-section-header"]
+
+[row label="home-trainers__row home-trainers__row--header" class="home-trainers__row home-trainers__row--header c-section-header__row"]
+
+[col label="intro" span="6" span__sm="12" class="home-trainers__col home-trainers__col--intro c-section-header__col"]
+
+[ux_text class="c-section-header__eyebrow"]
+
+C-SHERPA TRAINER
+[/ux_text]
+[ux_text class="c-section-header__title"]
+
+<h2>Được thiết kế và giảng dạy
+<span style="color: #4f46e5;">bởi các chuyên gia hàng đầu trong lĩnh vực</span></h2>
+[/ux_text]
+
+[/col]
+[col label="stats" span="6" span__sm="12" class="home-trainers__col home-trainers__col--stats"]
+
+[row_inner label="Stats wrapper" class="home-trainers__stats"]
+
+[col_inner label="Stat" span="4" span__sm="4" class="home-trainers__stat"]
+
+<p><strong>100%</strong></p>
+<p>Chuyên gia là những nhà lãnh đạo kỳ cựu</p>
+
+[/col_inner]
+[col_inner label="Stat" span="4" span__sm="4" class="home-trainers__stat"]
+
+<p><strong>100%</strong></p>
+<p>Nội dung được thiết kế dựa trên kinh nghiệm thực tiễn</p>
+
+[/col_inner]
+[col_inner label="Stat" span="4" span__sm="4" class="home-trainers__stat"]
+
+<p><strong>100%</strong></p>
+<p>Kiến thức có thể ứng dụng trực tiếp vào công việc</p>
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+[col label="CTA" span__sm="12" class="home-trainers__col home-trainers__col--cta"]
+
+[button text="Về chúng tôi" color="white" radius="10" icon="icon-arrow-right" link="#" target="_blank"]
+
+
+[/col]
+
+[/row]
+[tcp_trainers trainer_ids="429,369,567,568"]
+
+
+[/section]
+[section label="c-cta-banner" class="c-cta-banner"]
+
+[row label="Wrapper" style="collapse" class="c-cta-banner__layout"]
+
+[col label="Inner" span__sm="12" class="c-cta-banner__layout-col"]
+
+[row_inner label="Info" v_align="middle" class="c-cta-banner__inner"]
+
+[col_inner label="Content" span="5" span__sm="12" class="c-cta-banner__content"]
+
+<h4>Bạn đã sẵn sàng đánh thứcnhà lãnh đạo trong bạn?</h4>
+[button text="Đăng ký ngay" radius="10"]
+
+
+[/col_inner]
+
+[/row_inner]
+[ux_image id="134" image_size="original" class="c-cta-banner__media"]
+
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Testimonials" class="home-testimonials c-section-header"]
+
+[row class="home-testimonials__header c-section-header__row"]
+
+[col span__sm="12" class="c-section-header__col"]
+
+[ux_text class="c-section-header__eyebrow"]
+
+CẢM NHẬN HỌC VIÊN
+[/ux_text]
+[ux_text class="c-section-header__title"]
+
+<h2><span style="color: #4f46e5;">Học viên Talent Connect Plus</span> nói gì?</h2>
+[/ux_text]
+
+[/col]
+
+[/row]
+[tcp_reviews]
+
+
+[/section]
+[section label="home-card-info" class="home-card-info c-section"]
+
+[row label="home-card-info__layout" style="collapse" class="home-card-info__layout"]
+
+[col label="home-card-info__layout-col" span__sm="12" class="home-card-info__layout-col"]
+
+[row_inner class="home-card-info__inner"]
+
+[col_inner span="3" span__sm="12" class="home-card-info__col home-card-info__col--intro"]
+
+[ux_text class="c-intro__eyebrow"]
+
+Kết nối tri thức
+[/ux_text]
+[ux_text class="c-intro__body"]
+
+<h2>Kinh nghiệm lãnh đạo từ các CEOs kỳ cựu</h2>
+Lorem ipsum dolor sit amet consectetur. Tristique sollicitudin tristique amet volutpat quis rutrum nulla. Euismod porta netus dictum.
+[/ux_text]
+[button text="Khám phá ngay" radius="10" link="#" target="_blank" class="c-intro__btn"]
+
+
+[/col_inner]
+[col_inner label="col--cards" span="9" span__sm="12" class="home-card-info__col home-card-info__col--cards"]
+
+[row_inner_1 label="home-card-info__grid" v_align="equal" class="home-card-info__grid js-slider-nav js-slider-nav_3-2-1"]
+
+[col_inner_1 span="4" span__sm="12" class="home-card-info__card-col"]
+
+[ux_image_box style="overlay" img="188" text_align="left" class="c-media-card"]
+
+[ux_text class="c-media-card__title"]
+
+<h4>A Cup Of Leadership</h4>
+[/ux_text]
+[ux_text class="c-media-card__desc"]
+
+Chuỗi nội dung đặc biệt từ Talent Connect Plus, quy tụ 52 CEO với 52 hành trình lãnh đạo…
+[/ux_text]
+[ux_text class="c-media-card__meta"]
+
+50+ Video
+[/ux_text]
+
+[/ux_image_box]
+
+[/col_inner_1]
+[col_inner_1 span="4" span__sm="12" class="home-card-info__card-col"]
+
+[ux_image_box style="overlay" img="187" text_align="left" class="c-media-card"]
+
+[ux_text class="c-media-card__title"]
+
+<h4>A Cup Of Leadership</h4>
+[/ux_text]
+[ux_text class="c-media-card__desc"]
+
+Chuỗi nội dung đặc biệt từ Talent Connect Plus, quy tụ 52 CEO với 52 hành trình lãnh đạo…
+[/ux_text]
+[ux_text class="c-media-card__meta"]
+
+50+ Video
+[/ux_text]
+
+[/ux_image_box]
+
+[/col_inner_1]
+[col_inner_1 span="4" span__sm="12" class="home-card-info__card-col"]
+
+[ux_image_box style="overlay" img="186" text_align="left" class="c-media-card"]
+
+[ux_text class="c-media-card__title"]
+
+<h4>A Cup Of Leadership</h4>
+[/ux_text]
+[ux_text class="c-media-card__desc"]
+
+Chuỗi nội dung đặc biệt từ Talent Connect Plus, quy tụ 52 CEO với 52 hành trình lãnh đạo…
+[/ux_text]
+[ux_text class="c-media-card__meta"]
+
+50+ Video
+[/ux_text]
+
+[/ux_image_box]
+
+[/col_inner_1]
+
+[/row_inner_1]
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="home-logos" class="home-logos c-section"]
+
+[row label="Header" class="c-section-header c-section-header--center"]
+
+[col span__sm="12" align="center"]
+
+[ux_text class="c-section-header__eyebrow"]
+
+<h2>Được tin tưởng và lựa chọn từ các doanh nghiệp hàng đầu</h2>
+[/ux_text]
+
+[/col]
+
+[/row]
+[row label="logo-slider" width="full-width" class="logo-slider"]
+
+[col span__sm="12" class="logo-slider__swiper"]
+
+[ux_image id="158" image_size="original" class="swiper-slide"]
+
+[ux_image id="157" image_size="original" class="swiper-slide"]
+
+[ux_image id="156" image_size="original" class="swiper-slide"]
+
+[ux_image id="155" image_size="original" class="swiper-slide"]
+
+[ux_image id="154" image_size="original" class="swiper-slide"]
+
+[ux_image id="153" image_size="original" class="swiper-slide"]
+
+[ux_image id="152" image_size="original" class="swiper-slide"]
+
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="c-section-header" class="home-corporate-training c-section"]
+
+[row label="home-corporate-training__layout" v_align="equal" class="home-corporate-training__layout"]
+
+[col label="c-mosaic--left" span="4" span__sm="12" class="c-mosaic c-mosaic--left"]
+
+[row_inner label="c-mosaic__row" v_align="equal" class="c-mosaic__row"]
+
+[col_inner span="6" span__sm="9" class="c-mosaic__group c-mosaic__group--stack"]
+
+[ux_image id="313" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+[ux_image id="314" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+
+[/col_inner]
+[col_inner span="6" span__sm="3" class="c-mosaic__group c-mosaic__group--single"]
+
+[ux_image id="315" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+[col label="c-section-header--center" span="4" span__sm="12" class="c-mosaic c-mosaic--center c-section-header c-section-header--center"]
+
+[row_inner label="c-mosaic__row" class="c-mosaic__row"]
+
+[col_inner span="6" span__sm="3" class="c-mosaic__group"]
+
+[ux_image id="162" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+
+[/col_inner]
+[col_inner span="6" span__sm="3" class="c-mosaic__group"]
+
+[ux_image id="316" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+
+[/col_inner]
+
+[/row_inner]
+[row_inner label="Heading" class="c-section-header__row"]
+
+[col_inner span__sm="12" align="center" class="c-section-header__col"]
+
+[ux_text class="c-section-header__eyebrow"]
+
+DOANH NGHIỆP
+[/ux_text]
+[ux_text class="c-section-header__title"]
+
+<h2>Chương trình đào tạo doanh nghiệp</h2>
+[/ux_text]
+[ux_text class="c-section-header__desc"]
+
+Talent Connect Plus phát triển các chương trình đào tạo phù hợp với từng doanh nghiệp, cùng sự dẫn dắt đội ngũ chuyên gia giàu kinh nghiệm, nhằm nâng cao năng lực lãnh đạo và thúc đẩy phát triển bền vững.
+[/ux_text]
+[button text="Tìm Hiểu Thêm" radius="10" link="#" target="_blank"]
+
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+[col label="c-mosaic--right" span="4" span__sm="12" class="c-mosaic c-mosaic--right"]
+
+[row_inner label="c-mosaic__row" v_align="equal" class="c-mosaic__row"]
+
+[col_inner span="6" span__sm="3" class="c-mosaic__group c-mosaic__group--single"]
+
+[ux_image id="317" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+
+[/col_inner]
+[col_inner span="6" span__sm="9" class="c-mosaic__group c-mosaic__group--stack"]
+
+[ux_image id="548" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+[ux_image id="319" image_size="original" lightbox="true" lightbox_image_size="original"]
+
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="c-contact-cta" class="c-contact-cta c-section-header"]
+
+[row label="c-contact-cta__container" style="collapse" class="c-contact-cta__container"]
+
+[col span__sm="12"]
+
+[row_inner label="c-contact-cta__card" v_align="equal" class="c-contact-cta__card"]
+
+[col_inner label="Media" span="8" span__sm="12" span__md="6" class="c-contact-cta__media"]
+
+[ux_image id="191" image_size="original"]
+
+
+[/col_inner]
+[col_inner label="Form" span="4" span__sm="12" span__md="6" class="c-contact-cta__content"]
+
+[row_inner_1 label="Container col" style="collapse" class="c-contact-cta__content-inner"]
+
+[col_inner_1 span__sm="12"]
+
+[row_inner_2 label="Heading" class="c-section-header__row"]
+
+[col_inner_2 span__sm="12" align="center" class="c-section-header__col"]
+
+[ux_text class="c-section-header__eyebrow"]
+
+<span style="color: #4f46e5;">LIÊN HỆ</span>
+[/ux_text]
+[ux_text class="c-section-header__title"]
+
+<h2>Kết nối cùng
+Talent Connect Plus</h2>
+[/ux_text]
+
+[/col_inner_2]
+
+[/row_inner_2]
+[row_inner_2 label="Form" class="c-contact-cta__form"]
+
+[col_inner_2 span__sm="12"]
+
+[contact-form-7 id="193"]
+
+
+[/col_inner_2]
+
+[/row_inner_2]
+
+[/col_inner_1]
+
+[/row_inner_1]
+
+[/col_inner]
+
+[/row_inner]
+
+[/col]
+
+[/row]
+
+[/section]

@@ -1,0 +1,22 @@
+{
+  "name": "TCP-Theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node scss-index.js && mix watch",
+    "watch": "mix watch",
+    "prod": "node scss-index.js && mix --production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.94.2",
+    "sass-loader": "^16.0.6"
+  },
+  "overrides": {
+    "webpack": "5.75.0"
+  }
+}

@@ -1,0 +1,14 @@
+section.section {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+
+    &.c-cta-banner {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    @include breakpoints-down(medium) {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+}

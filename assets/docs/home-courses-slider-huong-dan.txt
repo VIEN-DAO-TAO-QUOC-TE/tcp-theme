@@ -1,0 +1,26 @@
+/*
+ * Hướng dẫn tích hợp Swiper cho slider khóa học trên mobile
+ */
+
+1. Thêm Swiper vào theme (nếu chưa có):
+
+- Tải Swiper tại https://swiperjs.com/get-started hoặc dùng CDN:
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+2. Thêm vào header/footer theme:
+
+- Thêm link và script trên vào header.php hoặc footer.php trước thẻ đóng </body>.
+
+3. Nạp file CSS/JS vừa tạo:
+
+- Thêm vào functions.php:
+
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('tcp-home-courses-slider', get_template_directory_uri() . '/assets/css/home-courses-slider.css');
+    wp_enqueue_script('tcp-home-courses-slider', get_template_directory_uri() . '/assets/js/home-courses-slider.js', [], false, true);
+});
+
+4. Kiểm tra lại trên mobile:
+- Nếu đã có class home-courses__slider, Swiper sẽ tự động chạy slider 1.5 item trên mobile.

@@ -1,0 +1,182 @@
+/* Confirmation page description styles */
+.tcp-confirm-page__desc {
+  font-family: var(--font-family-body, sans-serif);
+  font-weight: 400;
+  font-style: normal; /* 'Regular' is handled by font-weight */
+  font-size: var(--paragraph-small-font-size, 0.95rem);
+  line-height: var(--paragraph-small-line-height, 1.5);
+  letter-spacing: 0.5%; /* If you want px, use 0.5px instead */
+  vertical-align: middle;
+  color: rgba(31, 41, 55, 1);
+}
+.tcp-confirm-page {
+  background: #06080f;
+  padding: 36px 0;
+}
+
+.tcp-confirm-page__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
+  align-items: center;
+  gap: 56px;
+}
+
+.tcp-confirm-page__eyebrow {
+  margin: 0;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--paragraph-mini-font-size, 12px);
+  line-height: var(--paragraph-mini-line-height, 133.333%);
+  letter-spacing: 0.18px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color:var(--gray-500);
+}
+
+.tcp-confirm-page__title {
+  margin: 10px 0 0;
+  display: grid;
+  gap: 2px;
+  font-family: var(--font-definitions-font-family-headings, Inter);
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--heading-2-font-size, 30px);
+  line-height: var(--heading-2-line-height, 120%);
+  letter-spacing: var(--heading-2-letter-spacing, 0);
+  vertical-align: middle;
+}
+
+.tcp-confirm-page__title span {
+  font-family: var(--font-family-headings, sans-serif);
+  font-weight: 700;
+  font-style: normal; /* 'Bold' is handled by font-weight */
+  font-size: var(--heading-2-font-size, 2rem);
+  line-height: var(--heading-2-line-height, 1.2);
+  letter-spacing: var(--heading-2-letter-spacing, normal);
+  vertical-align: middle;
+}
+
+.tcp-confirm-page__desc {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 300;
+}
+
+.tcp-confirm-page__button {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: #eef2ff;
+  color: #312e81;
+  font-family: var(--font-definitions-font-family-body, Inter);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.07px;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.tcp-confirm-page__button:hover,
+.tcp-confirm-page__button:focus-visible {
+  background-color: #e0e7ff;
+  color: #312e81;
+}
+
+.tcp-confirm-page__visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tcp-confirm-page__visual-card {
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.tcp-confirm-page__visual-card img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1199px) {
+  .tcp-confirm-page__inner {
+    padding: 0 24px;
+    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .tcp-confirm-page__desc {
+    font-size: 18px;
+  }
+
+  .tcp-confirm-page__button {
+    margin-top: 24px;
+  }
+
+  .tcp-confirm-page__visual-card {
+    padding: 36px;
+  }
+}
+
+@media (max-width: 849px) {
+  .tcp-confirm-page {
+    padding: 40px 0 0;
+  }
+
+  .tcp-confirm-page__inner {
+    gap: 28px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .tcp-confirm-page__content{margin-bottom: 20px;}
+
+  .tcp-confirm-page__visual {
+    justify-content: center;
+    order: 1;
+  }
+
+  .tcp-confirm-page__content {
+    order: 2;
+  }
+
+  .tcp-confirm-page__visual-card {
+    width: 100%;
+    border-radius: 24px;
+    padding: 0;
+  }
+
+  .tcp-confirm-page__visual-card img {
+    width: 100%;
+  }
+
+  .tcp-confirm-page__title {
+    font-size: clamp(28px, 7.2vw, 36px);
+  }
+
+  .tcp-confirm-page__desc {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .tcp-confirm-page__button {
+    margin-top: 18px;
+  }
+}

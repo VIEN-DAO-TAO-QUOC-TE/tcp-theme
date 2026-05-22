@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Course Micro Learning (BEM)
+   ========================================================================== */
+
+.c-course-micro {}
+
+.c-course-micro__inner {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: var(--indigo-50, #EEF2FF);
+}
+
+.c-course-micro__header {
+    .c-course-micro__title {
+        margin-bottom: 0;
+    }
+}
+
+.c-course-micro__eyebrow {}
+
+.c-course-micro__title {}
+
+.c-course-micro__grid {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.c-course-micro__card {
+    display: flex;
+    min-width: 172px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 0 0;
+    border-radius: 16px;
+    background: var(--card-card, #FFF);
+}
+
+.c-course-micro__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.c-course-micro__iconImg {}
+
+.c-course-micro__icon--placeholder {}
+
+.c-course-micro__content {}
+
+.c-course-micro__cardTitle {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph small/medium */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    letter-spacing: 0.07px;
+}
+
+.c-course-micro__desc {}
+
+.c-course-micro__note {
+    color: var(--general-foreground, #1F2937);
+
+    /* paragraph small/regular */
+    font-family: var(--font-definitions-font-family-body, Inter);
+    font-size: var(--paragraph-small-font-size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 157.143%);
+    letter-spacing: 0.07px;
+}
+
+/* Modifiers */
+.c-course-micro--compact {}
+
+.c-course-micro__card--highlight {}

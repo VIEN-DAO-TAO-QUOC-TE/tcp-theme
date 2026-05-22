@@ -1,0 +1,467 @@
+#footer {
+    background-color: transparent;
+
+    .site-footer {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .absolute-footer {
+        display: none;
+    }
+}
+
+.site-footer {
+    background-color: #fff !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+
+    .footer-bg {}
+
+    .site-footer__inner {}
+
+    .site-footer__inner>.col {
+        padding-bottom: 0;
+        @include breakpoints-down(medium) {
+            padding: 0 20px !important;
+        }
+    }
+
+    .site-footer__inner>.col>.col-inner {
+        padding: 72px 72px 48px;
+        border-radius: 24px;
+        background: linear-gradient(56deg, #8795FC 0%, #747EE8 20.9%, #201192 70.01%);
+
+        @include breakpoints-down(medium) {
+            padding: 32px;
+        }
+    }
+
+    .site-footer__panel {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.site-footer__top {
+    @include breakpoints-down(medium) {
+        margin-left: -24px !important;
+        margin-right: -24px !important;
+    }
+
+    // .site-footer__brand > .col-inner > .row {
+    //     align-items: center;
+    // }
+
+    .site-footer__brandright {
+        padding-bottom: 0 !important;
+    }
+
+    .site-footer__brand {
+        padding-bottom: 0 !important;
+        .footer-image__logo {}
+
+        .footer-image__logo .img {
+            margin-bottom: 20px;
+        }
+
+        .footer-image__logo img {
+            margin-left: 0;
+            height: 120px;
+            width: auto;
+
+            @include breakpoints-down(medium) {
+                height: 80px;
+            }
+        }
+
+        .text {
+            color: var(--general-background, #FFF);
+
+            /* paragraph/bold */
+            font-family: var(--font-definitions-font-family-body, Inter);
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            /* 150% */
+            letter-spacing: 0;
+        }
+
+        .social-icons {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+
+        .social-icons>.icon {
+            padding: 7px;
+            font-size: 18px;
+
+        }
+
+        .footer_phone {
+            font-size: 14px !important;
+            padding: 0 !important;
+        }
+
+        .footer_envelop {
+            font-size: 14px !important;
+            padding: 0 !important;
+        }
+
+        // Flatsome class `icon-envelop` không có glyph trong lucide font đang load global
+        // → alias sang codepoint mail của lucide
+        .icon-envelop::before {
+            content: "\e10f" !important;
+        }
+
+        .site-footer__contact .icon-box-left {
+            line-height: 1;
+            // &.icon-phone,  &.icon-phone  {
+            //     font-family: 'lucide' !important;
+            //     font-size: inherit;
+            //     font-style: normal;
+            //     -webkit-font-smoothing: antialiased;
+            //     -moz-osx-font-smoothing: grayscale;
+            // }
+
+            // &.icon-phone {
+            //     &::before {
+            //         content: "\e133";
+            //     }
+            // }
+
+            // &.icon-mail {
+            //     &::before {
+            //         content: "\e10f";
+            //     }
+            // }
+
+            .icon-box-img {}
+
+            .icon-box-text {}
+        }
+    }
+
+    .site-footer__empty {}
+
+    .site-footer__nav {}
+
+    .site-footer__nav>.col-inner {
+        display: flex;
+        flex-direction: column;
+
+        .site-footer__subscribe {
+            margin-top: auto;
+
+        }
+
+        .site-footer__subscribe>.col {
+            padding-bottom: 0;
+
+        }
+    }
+}
+
+.site-footer__contact {
+    &>.col {
+        padding-bottom: 0;
+    }
+
+    .icon-box-left.icon-box {
+        align-items: center;
+
+        &::before {
+            // display: none;
+        }
+    }
+
+    .icon-box+.icon-box {
+        margin-top: 8px;
+    }
+
+    .icon-box .icon-box-img {
+        img {
+            padding-top: 0;
+            width: 16px;
+        }
+    }
+
+    .icon-box .icon-box-text {
+        padding-left: 6px;
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        ul>li {
+            margin-left: 0;
+        }
+    }
+}
+
+.site-footer__subscribe {
+    form {}
+
+    .wpcf7-form-control-wrap {}
+}
+
+// ===== Newsletter (CF7) =====
+.newsletter__field {
+    // pill container
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 58px;
+
+    padding: 8px 8px 8px 24px;
+    border-radius: 999px;
+    border: 1px solid var(--general-border, #E5E7EB);
+    background: transparent;
+
+    // CF7 auto wrap
+    >p {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        gap: 0; // tránh hở
+    }
+
+    // CF7 chèn br => phá layout
+    br {
+        display: none !important;
+    }
+
+    // span wrap input của CF7
+    .wpcf7-form-control-wrap {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    // input email
+    .newsletter__input {
+        width: 100%;
+        height: 100%;
+
+        border: 0 !important;
+        outline: 0;
+        background: transparent !important;
+        box-shadow: none !important;
+
+        color: #fff !important;
+
+        /* paragraph/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-regular-font-size, 16px);
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: var(--paragraph-regular-letter-spacing, 0);
+        line-height: 1;
+
+        padding: 0; // quan trọng: để canh đúng theo pill padding
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
+
+    // wrapper nút submit
+    .newsletter__btn-wrap {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 40px;
+        height: 40px;
+        border-radius: 28px;
+        background: var(--general-primary, #4F46E5);
+
+        // icon lucide overlay
+        &::before {
+            content: "\e4f2";
+            font-family: "lucide" !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            speak: none !important;
+            text-transform: none !important;
+            line-height: 1 !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            font-size: 18px; // chỉnh size icon ở đây
+            pointer-events: none;
+        }
+    }
+
+    // input submit của CF7
+    .newsletter__btn.wpcf7-submit {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+
+        border-radius: 999px !important;
+        background: rgba(255, 255, 255, 0.08);
+        cursor: pointer;
+
+        // ẩn text "Gửi đi"
+        font-size: 0 !important;
+        color: transparent !important;
+        text-indent: -9999px;
+        overflow: hidden;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+    }
+
+    // spinner CF7: đặt ra ngoài nút để không lệch tâm
+    .wpcf7-spinner {
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+    }
+}
+
+
+.site-footer__bottom {
+
+    @include breakpoints-down(small) {
+        flex-direction: column-reverse;
+
+        .site-footer__copy {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.site-footer__legal {}
+
+.site-footer__legal>.col-inner {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    @include breakpoints-down(small) {
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .ux-menu.justify-start {
+        justify-content: flex-end;
+        flex-direction: row;
+
+        @include breakpoints-down(small) {
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+    }
+
+    .ux-menu-link__link {
+        min-height: unset !important;
+    }
+
+    .ux-menu-link+.ux-menu-link {
+        margin-left: 24px !important;
+
+        @include breakpoints-down(small) {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+.site-footer__title {
+    &>* {
+        color: var(--general-primary-foreground, #F9FAFB);
+
+        /* paragraph mini/bold */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-mini-font-size, 12px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: var(--paragraph-mini-line-height, 16px);
+        /* 133.333% */
+        letter-spacing: 0.18px;
+        margin-bottom: 8px !important;
+    }
+}
+
+.site-footer__list {
+    .ux-menu-link {}
+
+    .ux-menu-link+.ux-menu-link {
+        margin-top: 8px !important;
+    }
+
+    .ux-menu-link>.ux-menu-link__link {
+        padding: unset;
+        min-height: unset;
+
+    }
+
+    .ux-menu-link .ux-menu-link__text {
+        color: var(--general-primary-foreground, #F9FAFB);
+
+        /* paragraph small/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-small-font-size, 14px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-small-line-height, 22px);
+        /* 157.143% */
+        letter-spacing: 0.07px;
+    }
+}
+
+.site-footer__legal {
+    .ux-menu {}
+
+    .ux-menu>.ux-menu-link {}
+
+    .ux-menu>.ux-menu-link>.ux-menu-link__link {}
+
+    .ux-menu>.ux-menu-link>.ux-menu-link__link>.ux-menu-link__text {
+        color: var(--general-primary-foreground, #F9FAFB);
+
+        /* paragraph mini/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-mini-font-size, 12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-mini-line-height, 16px);
+        /* 133.333% */
+        letter-spacing: 0.18px;
+    }
+}
+
+.site-footer__copy {
+    &>.col-inner {
+        color: var(--general-primary-foreground, #F9FAFB);
+
+        /* paragraph mini/regular */
+        font-family: var(--font-definitions-font-family-body, Inter);
+        font-size: var(--paragraph-mini-font-size, 12px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: var(--paragraph-mini-line-height, 16px);
+        /* 133.333% */
+        letter-spacing: 0.18px;
+    }
+}
