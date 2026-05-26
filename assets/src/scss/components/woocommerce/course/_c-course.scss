@@ -7,11 +7,14 @@
 }
 
 .c-course__body {
-    .c-course__content {}
+    .c-course__content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
 
     .c-course__content>.col-inner {
         display: flex;
-        padding: 24px;
+        padding: 16px;
         flex-direction: column;
         align-items: flex-start;
         gap: 40px;
@@ -81,11 +84,11 @@
 }
 
 .c-course-section__title {
-    color: var(--general-secondary-foreground, #312E81);
+    color: #312E81;
 
     /* heading 3 */
     font-family: var(--font-definitions-font-family-headings, Inter);
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: var(--heading-3-line-height, 116.667%);

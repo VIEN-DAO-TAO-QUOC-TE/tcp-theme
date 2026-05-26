@@ -328,6 +328,11 @@ body.category-khong-gian-tri-thuc {
     max-width: 1120px;
   }
 
+  .category-posts .archive-header .category-description {
+    display: block;
+    max-width: 100%;
+  }
+
   .category-grid {
     margin-top: var(--semantic-md, 16px);
   }

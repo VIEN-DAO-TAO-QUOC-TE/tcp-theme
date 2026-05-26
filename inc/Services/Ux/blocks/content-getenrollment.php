@@ -148,6 +148,9 @@ if (!empty($hunt_swiper_items) && count($hunt_swiper_items) < 6) {
 <style>
 /* 1. SECTION STYLE (CHUNG) */
 .bg_hero__homepage {background: linear-gradient(180deg, #FFFFFF 0%, #F3F4F6 100%);padding: 60px 0}
+.bg_hero__homepage,
+.bg_hero__homepage > .container,
+.section__scholarship_hunt,
 .section__scholarship_hunt .section-content,
 .section__scholarship_hunt .row-full-width,
 .section__scholarship_hunt .row-full-width > .col {
@@ -173,8 +176,6 @@ if (!empty($hunt_swiper_items) && count($hunt_swiper_items) < 6) {
 }
 .hunt-swiper .swiper-slide { height: auto; transition: transform 0.3s; }
 .hunt-swiper .swiper-slide-prev {
-    opacity: 0;
-    visibility: hidden;
     pointer-events: none;
 }
 .hunt-btn-prev,
@@ -371,10 +372,13 @@ if (!empty($hunt_swiper_items) && count($hunt_swiper_items) < 6) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // 1. Swiper Desktop
-    new Swiper('.hunt-swiper', {
+    var huntSwiper = new Swiper('.hunt-swiper', {
         slidesPerView: 1.2,
         spaceBetween: 20,
         loop: true,
+        loopAdditionalSlides: 2,
+        observer: true,
+        observeParents: true,
         navigation: {
             nextEl: '.hunt-btn-next',
             prevEl: '.hunt-btn-prev',
@@ -391,6 +395,20 @@ document.addEventListener('DOMContentLoaded', function() {
             1024: {
                 slidesPerView: 2.05,
                 spaceBetween: 20,
+            }
+        },
+        on: {
+            afterInit: function() {
+                var self = this;
+                // Loop + slidesPerView fractional: lần init đầu Swiper không position
+                // prev clone slide đúng. Hack: slideNext + slidePrev (0 duration) sau 1 frame
+                // → buộc Swiper re-render với position/class chuẩn cho prev slide.
+                requestAnimationFrame(function() {
+                    self.slideNext(0);
+                    requestAnimationFrame(function() {
+                        self.slidePrev(0);
+                    });
+                });
             }
         }
     });
