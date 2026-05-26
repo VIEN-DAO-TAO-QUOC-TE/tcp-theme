@@ -453,11 +453,146 @@ final class ContactCdpForm
         if (input) input.value = window.location.href;
     }
 
+    function getDraftKey(form) {
+        var idInput = form.querySelector('input[name="_wpcf7"]');
+        var id = idInput ? String(idInput.value) : '';
+        return id ? 'tcp_cdp_form_' + id + '_draft' : '';
+    }
+
+    function getDraftFields(form) {
+        var fields = form.querySelectorAll('input, select, textarea');
+        var out = [];
+        for (var i = 0; i < fields.length; i++) {
+            var el = fields[i];
+            if (!el.name) continue;
+            if (el.type === 'hidden') continue;
+            if (el.type === 'submit' || el.type === 'button' || el.type === 'file') continue;
+            out.push(el);
+        }
+        return out;
+    }
+
+    var DRAFT_TTL_MS = 30 * 60 * 1000;
+
+    function saveDraft(form) {
+        var key = getDraftKey(form);
+        if (!key) return;
+        var data = {};
+        getDraftFields(form).forEach(function (el) {
+            if (el.type === 'checkbox' || el.type === 'radio') {
+                if (el.checked) {
+                    if (!data[el.name]) data[el.name] = [];
+                    data[el.name].push(el.value);
+                }
+            } else {
+                data[el.name] = el.value;
+            }
+        });
+        try { localStorage.setItem(key, JSON.stringify({ ts: Date.now(), data: data })); } catch (e) {}
+    }
+
+    function restoreDraft(form) {
+        var key = getDraftKey(form);
+        if (!key) return;
+        var raw = null;
+        try { raw = localStorage.getItem(key); } catch (e) { return; }
+        if (!raw) return;
+        var parsed = null;
+        try { parsed = JSON.parse(raw); } catch (e) { return; }
+        if (!parsed || typeof parsed !== 'object') return;
+
+        if (!parsed.ts || (Date.now() - parsed.ts) > DRAFT_TTL_MS) {
+            try { localStorage.removeItem(key); } catch (e) {}
+            return;
+        }
+
+        var data = parsed.data;
+        if (!data || typeof data !== 'object') return;
+
+        getDraftFields(form).forEach(function (el) {
+            var v = data[el.name];
+            if (v == null) return;
+            if (el.type === 'checkbox' || el.type === 'radio') {
+                var arr = Array.isArray(v) ? v : [v];
+                el.checked = arr.indexOf(el.value) !== -1;
+            } else {
+                el.value = v;
+            }
+        });
+
+        var courseSelect = form.querySelector('.tcp-cdp-course');
+        if (courseSelect) courseSelect.dispatchEvent(new Event('change'));
+    }
+
+    function clearDraft(form) {
+        var key = getDraftKey(form);
+        if (!key) return;
+        try { localStorage.removeItem(key); } catch (e) {}
+    }
+
+    function bindAutosave(form) {
+        var timer = null;
+        function schedule() {
+            if (timer) clearTimeout(timer);
+            timer = setTimeout(function () { saveDraft(form); }, 300);
+        }
+        form.addEventListener('input', schedule);
+        form.addEventListener('change', schedule);
+    }
+
+    function setupNetworkStatus(form) {
+        if (form.dataset.tcpNetBound === '1') return;
+        form.dataset.tcpNetBound = '1';
+
+        var banner = document.createElement('div');
+        banner.className = 'tcp-cdp-form__net-banner';
+        banner.setAttribute('role', 'status');
+        banner.setAttribute('aria-live', 'polite');
+        banner.style.cssText = 'display:none;margin:0 0 12px;padding:10px 12px;border-radius:8px;font-size:13px;line-height:1.4;background:#FEF3C7;color:#92400E;';
+        form.insertBefore(banner, form.firstChild);
+
+        var submit = form.querySelector('input[type="submit"], button[type="submit"]');
+
+        function applyOnline() {
+            banner.style.display = 'none';
+            if (submit) submit.disabled = false;
+        }
+        function applyOffline() {
+            banner.textContent = 'Bạn đang mất kết nối mạng. Dữ liệu đã nhập sẽ được giữ lại — vui lòng thử lại khi có mạng.';
+            banner.style.display = '';
+            if (submit) submit.disabled = true;
+        }
+        function apply() {
+            (navigator.onLine === false ? applyOffline : applyOnline)();
+        }
+        window.addEventListener('online', apply);
+        window.addEventListener('offline', apply);
+        apply();
+
+        form.addEventListener('submit', function (e) {
+            if (navigator.onLine === false) {
+                e.preventDefault();
+                e.stopPropagation();
+                applyOffline();
+            }
+        }, true);
+    }
+
+    function handleMailFailed(form) {
+        var resp = form.querySelector('.wpcf7-response-output');
+        if (resp) {
+            resp.textContent = 'Gửi không thành công, vui lòng thử lại sau ít phút. Dữ liệu của bạn đã được giữ lại.';
+        }
+    }
+
     ready(function () {
         document.querySelectorAll('form.wpcf7-form').forEach(function (form) {
             if (form.querySelector('.tcp-cdp-course')) {
                 init(form);
                 setPageUrl(form);
+                restoreDraft(form);
+                bindAutosave(form);
+                setupNetworkStatus(form);
             }
         });
 
@@ -467,6 +602,10 @@ final class ContactCdpForm
             var cfg = window.TCP_CDP_DATALAYER || {};
             var detail = e.detail || {};
             var form = e.target;
+
+            if (form && form.querySelector && form.querySelector('.tcp-cdp-course')) {
+                clearDraft(form);
+            }
 
             if (cfg.formId && String(detail.contactFormId) === String(cfg.formId) && cfg.redirectUrl) {
                 if (form && form.querySelector) {
@@ -482,6 +621,13 @@ final class ContactCdpForm
             if (!select) return;
             select.value = '';
             select.dispatchEvent(new Event('change'));
+        });
+
+        document.addEventListener('wpcf7mailfailed', function (e) {
+            var form = e.target;
+            if (!form || !form.querySelector) return;
+            if (!form.querySelector('.tcp-cdp-course')) return;
+            handleMailFailed(form);
         });
     });
 })();
