@@ -22,6 +22,7 @@ final class ContactCdpForm
         add_filter('wpcf7_form_elements', [$this, 'inject_fields']);
         add_filter('wpcf7_posted_data', [$this, 'merge_posted_data']);
         add_action('wpcf7_before_send_mail', [$this, 'before_send_mail'], 10, 3);
+        add_filter('wpcf7_skip_mail', [$this, 'maybe_skip_mail'], 10, 2);
         add_action('wpcf7_enqueue_scripts', [$this, 'enqueue_assets']);
         add_action('wp_head', [$this, 'output_utm_capture'], 1);
 
@@ -199,6 +200,14 @@ final class ContactCdpForm
             $data['page_url'] = esc_url_raw((string) wp_unslash($_POST['page_url']));
         }
         return $data;
+    }
+
+    public function maybe_skip_mail($skip, $contact_form)
+    {
+        if ($contact_form && (int) $contact_form->id() === self::FORM_ID) {
+            return true;
+        }
+        return $skip;
     }
 
     public function before_send_mail($contact_form, &$abort, $submission): void
